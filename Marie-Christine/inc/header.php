@@ -34,7 +34,7 @@
         <p>des plats sains tout l'année</p>
     </div>
 
-<!-- .TOP-NAVIGATIION -->
+<!-- .TOP-NAVIGATION -->
 
 <!-- <nav class=" navbar navbar-expand-lg navbar-light bg-light mb-5"> -->
 <nav class="top-navigation container-fluid mb-5">
@@ -91,20 +91,34 @@
 <!-- .SEARCH-CONTAINER -->
 <div class="search-container">
 
-<ul class="navbar-nav me-auto">
-    <li>
-        <form class="d-flex">
-            <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
-            <button class="my-2 my-sm-0" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
+    <ul class="navbar-nav me-auto">
+        <li>
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
+                <button class="my-2 my-sm-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
-            </button>
-        </form>
-    </li>
-</ul>
+                </button>
+            </form>
+        </li>
+    </ul>
 
 </div>
 <!-- / .SEARCH-CONTAINER -->
 
 
 </div>
+ <!-- / SITE-HEADER -->
+
+ <div class="container-fluid">
+     <div class="container card-container">
+        <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):
+            foreach ($_SESSION['messages'] as $type => $mess):
+                foreach ($mess as $key => $message):
+        ?>
+
+        <div class="alert alert-<?= $type; ?> text-center">
+            <p><?= $message; ?></p>
+        </div>
+        <?php unset($_SESSION['messages'][$type][$key]); ?>
+        <?php endforeach; endforeach; endif; ?>
