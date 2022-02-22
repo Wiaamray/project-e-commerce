@@ -1,0 +1,19 @@
+/*Section card*/
+
+.card-container {
+    padding-bottom: 8rem;
+}
+
+.star{
+    color: rgb(230, 230, 88);
+}
+
+.cost span{
+    color: #F39F06;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.card-text{
+    font-size:18px;
+}
