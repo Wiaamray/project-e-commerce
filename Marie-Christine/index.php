@@ -1,12 +1,13 @@
 <?php require_once 'inc/header.php'; ?>
 
+<div class="container-fluid">
 
- <!--A propos section-->
-<div class="container">
+ <!-- #APROPOS -->
+<div id="apropos" class="container">
 
     <section id="best-features" class="text-center"> 
 
-        <h2 class="mb-5 font-weight-bold">DeliveryFood</h2>
+        <h2 class="mb-5 font-weight-bold">Nos valeurs</h2>
 
         <!--Grid row-->
         <div class="row d-flex justify-content-center mb-4">
@@ -14,17 +15,19 @@
             <div class="col-md-8">
                 <!-- Description -->
                 <p class="grey-text">
-                            Notre compagne à pour objectif <br/>la livraison à domicile des repas frais et  équilibrés.
-                             Est parfaite pour ceux qui fuient les produits industriels.<br/>
-                             On prend on considération la tendance écologique afin d’éviter le gaspillage alimentaire et protéger la planéte. </p>
+                    Notre compagnie à pour objectif la livraison à domicile des repas frais et  équilibrés.<br/>
+                    Est parfaite pour ceux qui fuient les produits industriels.<br/>
+                    On prend on considération la tendance écologique afin d’éviter le gaspillage alimentaire et protéger la planète.
+                </p>
 
             </div>
+        </div>     
+    </section> <!-- / #APROPOS --> 
+</div>
 
-<!--A propos section Fin-->
 
 
 
-<div class="container-fluid">
      <div class="container card-container">
         <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):
             foreach ($_SESSION['messages'] as $type => $mess):

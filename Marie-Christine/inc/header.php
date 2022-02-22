@@ -63,22 +63,22 @@
     <div class="container-fluid">
             <ul class="navbar-nav d-flex justify-content-center me-auto">
 
-                <li class="nav-item">
+                <li class="">
                     <a class="nav-link active" href="">Accueil</a>
                 </li>
-                <li class="nav-item">
+                <li class="">
                     <a class="nav-link" href="">Les menus</a>
                 </li>
-                <li class="nav-item">
+                <li class="">
                     <a class="nav-link" href="">Les plats</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">A propos</a>
+                <li class="">
+                    <a class="nav-link" href="#apropos">Nos Valeurs</a>
                 </li>
-                <!-- <li class="nav-item">
+                <!-- <li class="">
                     <a class="nav-link" href="">Mes commandes</a>
                 </li> -->
-                <li class="nav-item">
+                <li class="">
                     <a class="nav-link" href="">Contact</a>
                 </li>
 
