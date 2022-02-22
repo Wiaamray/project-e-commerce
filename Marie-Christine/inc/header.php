@@ -11,8 +11,8 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -26,6 +26,28 @@
 <!-- .SITE-HEADER -->
 <div class="site-header">
 
+<!-- . SOCIAL-MENU -->
+<div class="social-menu">
+                <!-- Social Icon  -->
+    <ul class="navbar-nav nav-flex-icons">
+    <li class="">
+        <a class="nav-link"><i class="fab fa-facebook fa-2x"></i></a>
+    </li>
+    <li class="">
+        <a class="nav-link"><i class="fab fa-twitter fa-2x"></i></a>
+    </li>
+    <li class="">
+        <a class="nav-link"><i class="fab fa-instagram fa-2x"></i></a>
+    </li>
+</ul>
+</div>
+<!-- / .SOCIAL-MENU -->
+
+
+
+
+
+
     <!-- .LOGO-CONTAINER -->
     <div class="logo-container">
         <h2>
@@ -34,10 +56,12 @@
         <p>des plats sains tout l'année</p>
     </div>
 
+
 <!-- .TOP-NAVIGATION -->
 
 <!-- <nav class=" navbar navbar-expand-lg navbar-light bg-light mb-5"> -->
 <nav class="top-navigation container-fluid mb-5">
+
         <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
 
             <li class=""><a href="/projet/security/login.php" class="">connection</a></li>
@@ -50,8 +74,7 @@
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>
                     </button>
                 </a>
-            </li>
-            
+            </li>            
         </ul>
 
 </nav> 
