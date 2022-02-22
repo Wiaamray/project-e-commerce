@@ -6,14 +6,28 @@ html, * {
 
 .site-header {
     position: relative;
-    height: 100vh;
+    height: 52.25vw; /* to fit background image size 1909px x 998px */
     text-align: center;
     background-image: url("../upload/Header2.jpg");
     background-size: cover;
 }
 
-.site-header::after {
+.social-menu {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-align: left;
+}
 
+.social-menu .navbar-nav {
+    align-items: flex-start;
+}
+
+.social-menu .navbar-nav .nav-link {
+    padding: .5rem;
+}
+.fab {
+    color: #47b06b;
 }
 
 .logo-container {
@@ -53,9 +67,15 @@ html, * {
 }
 .main-navigation ul {
     margin: 0 auto;
-}
-.navbar-nav li {
     padding: 0 1rem;
+    font-size: 1rem;
+    border-bottom: 2px dotted #5c9544;
+    border-top: 2px dotted #f7aa58;
+    border-radius: 2rem;
+}
+
+.navbar-nav li {
+    padding: 0 1.5rem;
 }
 .search-container {
     position: relative;
