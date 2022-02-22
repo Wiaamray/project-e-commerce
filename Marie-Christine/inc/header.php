@@ -110,15 +110,4 @@
 </div>
  <!-- / SITE-HEADER -->
 
- <div class="container-fluid">
-     <div class="container card-container">
-        <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):
-            foreach ($_SESSION['messages'] as $type => $mess):
-                foreach ($mess as $key => $message):
-        ?>
 
-        <div class="alert alert-<?= $type; ?> text-center">
-            <p><?= $message; ?></p>
-        </div>
-        <?php unset($_SESSION['messages'][$type][$key]); ?>
-        <?php endforeach; endforeach; endif; ?>
