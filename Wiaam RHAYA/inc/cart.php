@@ -4,11 +4,6 @@ function add(int $id)
 {
     $panier = $_SESSION['cart'];
 
-//    $test=array(
-//      2=>2,
-//      3=>1,
-//    );
-
     if (!empty($panier[$id])):
         $panier[$id]++;
     else:
@@ -22,10 +17,6 @@ function remove(int $id)
 {
     $panier = $_SESSION['cart'];
 
-//    $test=array(
-//      2=>2,
-//      3=>1,
-//    );
 
     if (!empty($panier[$id]) && $panier[$id]!==1):
         $panier[$id]--;
@@ -41,10 +32,6 @@ function delete(int $id)
 {
     $panier = $_SESSION['cart'];
 
-//    $test=array(
-//      2=>2,
-//      3=>1,
-//    );
 
     if (!empty($panier[$id])):
         unset($panier[$id]);
@@ -109,5 +96,3 @@ function getQuantity()
     return $total;
 
 }
-
-

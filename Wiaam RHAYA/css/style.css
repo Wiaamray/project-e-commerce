@@ -1,116 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@100;300;500;900&display=swap');
 
+/*A propos section*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.container{
+    margin-top:8rem;
 }
 
-body{
-    font-family: 'Nunito', sans-serif;
-}
+/*Fin A propos section*/
 
 
-/*flex*/
-
-.flex{
-    display: flex;
-}
-
-.flex-column{
-    flex-direction: column;
-}
-
-.justify-center{
-    justify-content: center;
-}
-
-.justify-around{
-    justify-content: space-around;
-}
-
-.justify-between{
-    justify-content: space-between;
-}
-
-
-.justify-end{
-    justify-content: flex-end;
-}
-
-.align-center{
-    align-items:center;
-}
-
-.color_white{
-    color: white;
-     margin-bottom: 1rem;
-}
-
-
-/*Debut header*/
-
-
-#header{
- 
-    background: url('../upload/Header.jpg');
-    width:100%;
-    height:80vh;
-    color:black;
-    background-position:center;
-    background-size:cover;  
-}
-
-
-
-/*about*/
-
-.about-text{
-    font-size:20px;
-    color: black;
-}
-
-.row{
-    margin:0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-/*Fin about*/
 
 
 
 
 /*Section card*/
 
-.row{
- 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
- 
-    margin-top: 110px;
-
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.card-img-top{
-    width:100%;
-    height: 100%;
+.card-container {
+   margin-top: 8rem;
 }
 
 .star{
     color: rgb(230, 230, 88);
 }
-
 
 .cost span{
     color: #F39F06;
@@ -119,134 +29,14 @@ h1{
 }
 
 .card-text{
-    font-size:18px;
+    font-size:11px;
 }
-
 
 
 /*Fin Card*/
 
 
-/* Avis des utilisateurs*/
-
-
-
-/*footer*/
-
-.container footer{
-    width:80vw;
- }
- 
- 
-
-footer{
-    margin-top:200px;
-    display:flex;
-    flex-direction:column;
-    flex-shrink: 0;
-    width:100%;
-    background:black;
-    color:white;
-}
-
-.contenu-footer{
-    width:1200px;
-    margin:0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    font-size:12px;
-    padding: 50px 0 100px;
-}
-
-
-.bloc{
-    width:25%;
-    margin: 0 30px;
-}
-.footer-contact h3,
-.footer-services h3,
-.footer-horraire h3,
-.footer-services {
-    font-size:18px;
-    padding-bottom:20px;
-    color:white;
-}
-
-.footer-contact p{
-    padding: 5px 0;
-}
-
-.liste-services,
-.liste-horraire{
-    list-style: none;
-
-}
-
-.liste-services li{
-    padding: 2px 0;
-}
-
-.liste-services a{
-    text-decoration:none;
-}
-
-
-
-.footer-copyright p{
-
-text-align:center;
-font-size:12px;
-
-}
 
 
 
 
-
-
-
-
-
-/*Responsive*/
-
-@media screen and (max-width:1300px){
-    .contenu-footer{
-        width:700px;
-        flex-wrap: wrap;
-    }
-
-    .bloc{
-        width:40%;
-        margin:0 0;
-    }
-
-    .bloc:nth-child(1),
-    .bloc:nth-child(2){
-        margin-bottom:50px;
-    }
-}
-
-@media screen and (max-width:800px){
-    .contenu-footer{
-        width:320px;
-    }
-
-    .bloc{
-        width:300px;
-        margin:30px 30px;
-    }
-
-    
-    .bloc:nth-child(1),
-    .bloc:nth-child(2){
-        margin-bottom:50px;}
-
-        .bloc:nth-child(1){
-            margin-top:0;
-            width:320px;
-        }    
-    }
-
-    

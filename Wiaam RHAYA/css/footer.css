@@ -1,0 +1,103 @@
+
+
+footer {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100%;
+    background: #1d1d1b;
+    color:white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contenu-footer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: .75rem;
+    padding: 4rem 0;
+}
+
+.bloc {
+    margin: 0 4vw;
+}
+
+.footer-services,
+.footer-contact,
+.footer-horaires {
+    text-align: left;
+}
+
+.footer-services h3,
+.footer-contact h3,
+.footer-horaires h3 {
+    font-size: 1.125rem;
+    padding-bottom: 1.25rem;
+    color:white;
+}
+
+.footer-contact p {
+    padding: 5px 0;
+}
+
+.liste-services li, .liste-contact li {
+    padding: 2px 0;
+}
+
+.footer-copyright p {
+    text-align: center;
+    font-size: .75rem;
+}
+
+
+
+
+/*Responsive*/
+
+@media screen and (max-width:1300px){
+    .contenu-footer{
+        width:700px;
+        flex-wrap: wrap;
+    }
+
+    .bloc{
+        width:40%;
+        margin:0 0;
+    }
+
+    .bloc:nth-child(1),
+    .bloc:nth-child(2){
+        margin-bottom:50px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .contenu-footer{
+        width:320px;
+    }
+
+    .bloc{
+        width:300px;
+        margin:30px 30px;
+    }
+
+    
+    .bloc:nth-child(1),
+    .bloc:nth-child(2){
+        margin-bottom:50px;}
+
+        .bloc:nth-child(1){
+            margin-top:0;
+            width:320px;
+        }    
+    }
