@@ -8,7 +8,7 @@ html, * {
     position: relative;
     height: 100vh;
     text-align: center;
-    background-image: url("../upload/Header.jpg");
+    background-image: url("../upload/Header2.jpg");
     background-size: cover;
 }
 
@@ -33,6 +33,7 @@ html, * {
     font-size: 4rem;
     color: #405a24;
     font-weight: 900;
+    text-shadow: 2px 2px 2px white;
 }
 .top-navigation {
     position: absolute;
