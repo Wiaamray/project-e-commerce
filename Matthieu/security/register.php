@@ -9,7 +9,7 @@ endif;
 
 if (!empty($_POST)) :
 
-    function password_strength_check($password, $min_len = 6, $max_len = 15, $req_digit = 1, $req_lower = 1, $req_upper = 1, $req_symbol = 1)
+    function password_strength_check($password, $min_len = 6, $max_len = 20, $req_digit = 1, $req_lower = 1, $req_upper = 1, $req_symbol = 1)
     {
         // Build regex string depending on requirements for the password
         $regex = '/^';
@@ -56,7 +56,7 @@ if (!empty($_POST)) :
 
     if (!password_strength_check($_POST['password'])) :
 
-        $_SESSION['messages']['danger'][] = "Votre mot de passe doit contenir au minimum 6 caractères, maximum 15 caractères,majuscule, minuscule et un caractère spécial ! # @ % & * + -";
+        $_SESSION['messages']['danger'][] = "Votre mot de passe doit contenir au minimum 6 caractères, maximum 15 caractères,majuscule, minuscule et un caractère spécial ! # @ % & * + - .";
         header('location:./register.php');
         exit();
 
@@ -118,7 +118,7 @@ endif;
                                         <input type="file" id="image-input" accept="image/png, image/jpg" />
                                     </div>
                                 </div>
-                                
+
                                 <!-- input pour le nom -->
                                 <label for="nickname" class="mt-3">Nom</label>
                                 <div class="icone">
