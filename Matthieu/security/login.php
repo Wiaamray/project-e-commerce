@@ -59,16 +59,6 @@ if (!empty($_POST)) :
 
 endif;
 
-
-
-
-
-
-
-
-
-
-
 ?>
 
 
