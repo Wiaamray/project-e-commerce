@@ -40,10 +40,10 @@
 <nav class="top-navigation container-fluid mb-5">
         <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
 
-            <li class="nav-item"><a href="/projet/security/login.php" class="">connection</a></li>
+            <li class=""><a href="/projet/security/login.php" class="">connection</a></li>
             <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
             <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a>                 -->
-            <li class="nav-item">
+            <li class="">
                 <a class="nav-link active" href="">
                     <button type="button" class="btn position-relative p-2 ">
                         <i class="fa-solid fa-cart-arrow-down fa-2xl "></i>
