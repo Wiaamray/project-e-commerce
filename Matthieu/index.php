@@ -114,7 +114,7 @@ function nbEtoiles(int $nb)
                                 </h4>
                             </div>
                             <?php if (admin()) { ?>
-                                <a href="<?= SITE . 'admin/ajoutProduit.php?id=' . $product['id']; ?>" class="btn btn-primary">Modifier</a>
+                                <a href="<?= SITE . 'admin/admin.php?id=' . $product['id']; ?>" class="btn btn-primary">Modifier</a>
                                 <a href="?id=<?= $product['id']; ?>" onclick='return confirm("Êtes-vous sûr de supprimer cet article ?")' class="btn btn-danger">Supprimer</a>
                             <?php } elseif ($quant == 0) { ?>
                                 <div class="text-center mb-3">
@@ -123,7 +123,7 @@ function nbEtoiles(int $nb)
                             <?php } else { ?>
                                 <div class="text-center mb-3">
                                     <a href="?remove=<?= $product['id']; ?>" class="btn btn-primary">-</a>
-                                    <input class="text-center ps-3 pe-0" disabled style="width: 15%" type="number" value="<?= $quant; ?>">
+                                    <input class="text-center text-primary ps-3 pe-0" disabled style="width: 15%" type="number" value="<?= $quant; ?>">
                                     <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="btn btn-primary">+</a>
                                 </div>
                             <?php } ?>

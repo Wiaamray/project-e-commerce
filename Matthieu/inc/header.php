@@ -41,11 +41,11 @@
 <nav class="top-navigation container-fluid mb-5">
         <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
 
-            <li class=""><a href="<?= 'security/login.php'; ?>" class="">connection</a></li>
+            <li class=""><a href="<?= SITE . 'security/login.php'; ?>" class="">connection</a></li>
             <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
             <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a>                 -->
             <li class="">
-                <a class="nav-link active" href="">
+                <a class="nav-link active" href="<?= SITE . 'front/fullCart.php'; ?>">
                     <button type="button" class="btn position-relative p-2 ">
                         <i class="fa-solid fa-cart-arrow-down fa-2xl "></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>
