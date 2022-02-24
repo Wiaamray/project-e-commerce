@@ -77,7 +77,7 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
         <div class="card-left">
           <!-- <img src="<?= $product['picture']; ?>" class="img-fluid rounded-start" alt="..."> -->
         <!-- !!   ATTENTION L'IMAGE DOIT ETRE MODIFIÉE DANS LA BASE DE DONNÉES POUR AFFICHER L*IMAGE ENTIÈRE !! -->
-        <img src="../upload/monika-grabkowska-P1aohbiT-EY-unsplash.jpg" class="img-fluid rounded-start" alt="..">
+        <img src="<?= $product['picture']; ?>" class="img-fluid rounded-start" alt="..">
         </div>
 
         <!-- .CARD-RIGHT-->
