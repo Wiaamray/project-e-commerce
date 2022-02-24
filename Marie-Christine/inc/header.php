@@ -97,16 +97,15 @@
 
 
             <?php if (!admin() && !connect()) { ?>
-                    <!-- <li class=""><a href="<?= './security/login.php'; ?>" class="connection nav-link" >connection</a></li> -->
-                    <li class=""><a href="<?= '../security/login.php#'; ?>" class="connection nav-link" >connection</a></li>
+                    <li class=""><a href="<?= SITE . 'security/login.php#login-card'; ?>" class="connection nav-link" >connection</a></li>
                 <?php } else { ?>
                     <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
-                    <li><a href="<?= './'; ?>?unset=1" class=""><i class="fa-solid fa-power-off fa-2x"></i></a>
+                    <li><a href="<?= SITE; ?>?unset=1" class=""><i class="fa-solid fa-power-off fa-2x"></i></a>
                 <?php } ?>
 
 
             <li class="">
-                <a href="<?= './front/fullCart.php'; ?>" class="basket nav-link" >
+                <a href="<?= SITE . 'front/fullCart.php'; ?>" class="basket nav-link" >
                     <button type="button" class="btn position-relative p-2">
                         <!-- <i class="fa-solid fa-cart-arrow-down fa-2xl "></i> -->
                         <i class="fas fa-shopping-basket fa-2xl"></i>
@@ -126,16 +125,16 @@
             <ul class="navbar-nav d-flex justify-content-center me-auto">
 
                 <li class="">
-                    <a class="nav-link active" href="index.php">Accueil</a>
+                    <a class="nav-link active" href="<?= SITE; ?>">Accueil</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#">Les menus</a>
+                    <a class="nav-link" href="<?= SITE; ?>#">Les menus</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="index.php#cartes">Les plats</a>
+                    <a class="nav-link" href="<?= SITE; ?>#cartes">Les plats</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="index.php#apropos">Nos Valeurs</a>
+                    <a class="nav-link" href="<?= SITE; ?>#apropos">A propos</a>
                 </li>
                 <!-- <li class="">
                     <a class="nav-link" href="">Mes commandes</a>

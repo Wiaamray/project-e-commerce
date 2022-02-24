@@ -97,7 +97,7 @@
 
 
             <?php if (!admin() && !connect()) { ?>
-                    <li class=""><a href="<?= SITE . 'security/login.php#'; ?>" class="connection nav-link" >connection</a></li>
+                    <li class=""><a href="<?= SITE . 'security/login.php#login-card'; ?>" class="connection nav-link" >connection</a></li>
                 <?php } else { ?>
                     <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
                     <li><a href="<?= SITE; ?>?unset=1" class=""><i class="fa-solid fa-power-off fa-2x"></i></a>

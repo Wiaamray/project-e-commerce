@@ -88,30 +88,29 @@ li {
 }
 
 
-
 .card {
+    padding-top: 1.5rem;
     border: none;
     border-bottom: 1px solid #5c9544;
     border-radius: 2rem;
-    /* box-shadow: 0 0 3rem #ddd; */
+    box-shadow: 0 0 3rem #ddd;
 }
+
 .card-body {
     padding: 0 1rem 1rem;
-    border-right: 1px solid #f7aa58;
-    border-left: 1px solid #f7aa58;
+    /* border-right: 1px solid #f7aa58;
+    border-left: 1px solid #f7aa58; */
 }
-.card-header {
-    background-image: url("../upload/vecteezy_green-seamless-pattern-cloth-graphic-simple-square-tartan_5384703.svg");
-    background-size: 3rem 3rem;
-    border: 1px solid #4ab16b;
-    border-bottom: none;
-    border-radius: .5rem .5rem 0 0;
 
-	display: flex;
+.card-header {
+    display: flex;
 	height: 14vw;
 	justify-content: center;
 	align-items: center;
-
+    background-color: #fff;
+    background-size: 3rem 3rem;
+    border-bottom: none;
+    border-radius: .5rem .5rem 0 0;
 }
 
 .card-header-content {
@@ -144,6 +143,7 @@ li {
 }
 
 .card-title {
+    margin-bottom: 1rem;
     height: 4rem;
     display: flex;
     align-items: center;
@@ -155,6 +155,7 @@ li {
     letter-spacing: 1px;
     border-bottom: #b9d378 1px solid;
 }
+
 .card-text {
     height: 12rem;
     font-family: 'Open Sans', sans-serif;
@@ -172,7 +173,6 @@ li {
     color: rgb(230, 230, 88);
     text-align: center;
 }
-
 
 .btn {
     display: inline-block;
@@ -284,4 +284,10 @@ cursor: url(../upload/asperges-link.svg), auto;
     color: #fff;
     background-color: #415a23!important;
     cursor: url(../upload/asperges-link.svg), auto;    
+}
+
+/* Vider le panier */
+.btn.vider {
+    background-color: #e17a67;
+    border-color:#e17a67;
 }
