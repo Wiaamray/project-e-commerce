@@ -108,15 +108,15 @@ li {
     border-radius: .5rem .5rem 0 0;
 
 	display: flex;
-	height: 15vw;
+	height: 14vw;
 	justify-content: center;
 	align-items: center;
 
 }
 
 .card-header-content {
-	width: 15vw;
-	max-width: 15rem;
+	width: 14vw;
+	max-width: 14rem;
 	border-radius: 50%;
 	overflow: hidden;
 }
@@ -240,3 +240,49 @@ cursor: url(../upload/asperges-link.svg), auto;
     
 }
 
+/* LOGIN et REGISTER*/
+.login-page h2,
+.register-page h2 {
+    color:#F39F06;
+    font-weight: 900;
+}
+.login-page.main-content section,
+.register-page.main-content section {
+    background-image: linear-gradient(180deg, green, transparent);
+    border-radius: 1rem 1rem 0 0;
+    padding-top: 1rem;
+}
+
+.login-page.main-content .card-body,
+.register-page.main-content .card-body {
+    border: none;
+}
+.login-page.main-content input,
+.register-page.main-content input {
+    border-radius: 4px;
+}
+.login-page.main-content h6,
+.register-page.main-content h6 {
+    letter-spacing: 2px;
+}
+
+.login-page.main-content h6 a,
+.register-page.main-content h6 a {
+    text-decoration: none;
+    border-bottom: 1px solid #f7aa58;
+}
+
+
+.btn.se-connecter,
+.btn.inscription {
+    letter-spacing: 3px;
+    transition: all 500ms ease;
+    cursor: url(../upload/asperges-link.svg), auto;    
+}
+
+.btn.se-connecter:hover,
+.btn.inscription:hover {
+    color: #fff;
+    background-color: #415a23!important;
+    cursor: url(../upload/asperges-link.svg), auto;    
+}

@@ -14,10 +14,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,900;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    
+<?php
+
+    // pour récupérer le chemin et le nom de fichier actuel
+    $url = explode('/', $_SERVER['PHP_SELF']);
+    $urlFin = array_pop($url);
+    if ($urlFin == 'index.php' || $urlFin == 'DetailPlat.php') {
+    ?>
+
+        <!-- liens css dont le chemin est dans l'url racine -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/footer.css">
+
+    <?php } else { ?>
+
+        <!-- liens css dont le chemin est dans un sous-dossier de l'url racine -->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+
+    <?php } ?>
+
+    <!-- liens css indépendants -->
+    <link rel="stylesheet" href="../css/formulaire.css">
     <link rel="stylesheet" href="./css/details.css">
+
+
 </head>
 
 <body>
@@ -63,13 +87,24 @@
 
         <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
 
-            <li class="">
+            <!-- <li class="">
                 <a href="" class="connection nav-link">connection</a>
-            </li>
+            </li> -->
             <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
             <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a> -->
+
+
+            <?php if (!admin() && !connect()) { ?>
+                    <!-- <li class=""><a href="<?= './security/login.php'; ?>" class="connection nav-link" >connection</a></li> -->
+                    <li class=""><a href="<?= '../security/login.php#'; ?>" class="connection nav-link" >connection</a></li>
+                <?php } else { ?>
+                    <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
+                    <li><a href="<?= './'; ?>?unset=1" class=""><i class="fa-solid fa-power-off fa-2x"></i></a>
+                <?php } ?>
+
+
             <li class="">
-                <a href="" class="basket nav-link" >
+                <a href="<?= './front/fullCart.php'; ?>" class="basket nav-link" >
                     <button type="button" class="btn position-relative p-2">
                         <!-- <i class="fa-solid fa-cart-arrow-down fa-2xl "></i> -->
                         <i class="fas fa-shopping-basket fa-2xl"></i>
@@ -95,10 +130,10 @@
                     <a class="nav-link" href="#">Les menus</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#cartes">Les plats</a>
+                    <a class="nav-link" href="index.php#cartes">Les plats</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#apropos">Nos Valeurs</a>
+                    <a class="nav-link" href="index.php#apropos">Nos Valeurs</a>
                 </li>
                 <!-- <li class="">
                     <a class="nav-link" href="">Mes commandes</a>
