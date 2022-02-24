@@ -54,7 +54,7 @@
         <h2>
             <a class="navbar-brand" href="">Au Bon Goût</a>
         </h2>
-        <p>des plats sains tout l'année</p>
+        <p>des plats sains toute l'année</p>
     </div>
 
 
@@ -96,7 +96,7 @@
                         <li><a class="dropdown-item" href="<?= SITE . 'Akiziou/produits.php' ?>?category=Menu">Menus</a></li>                       
                         <li><a class="dropdown-item" href="<?= SITE . 'Akiziou/produits.php' ?>?category=Plat">Plats</a></li>
                         <li><a class="dropdown-item" href="<?= SITE . 'Akiziou/produits.php' ?>?category=Dessert">Desserts</a></li>
-                        <li><a class="dropdown-item" href="<?= SITE . 'Akiziou/produitss.php' ?>?category=Promo">Promotions</a></li>
+                        <li><a class="dropdown-item" href="<?= SITE . 'Akiziou/produits.php' ?>?category=Promo">Promotions</a></li>
                     </ul>
                 </li>
                <!-- <li class="">

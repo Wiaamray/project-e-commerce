@@ -5,7 +5,7 @@
         $category = $_GET['category'];
     } 
     //var_dump($category);
-    $resultat=executeRequete("SELECT * FROM product WHERE category like '$category%' ");
+    $resultat=executeRequete("SELECT * FROM product WHERE category like '%$category%' ");
     $products = $resultat->fetchAll(PDO::FETCH_ASSOC);
     //var_dump($products);
 
