@@ -1,68 +1,47 @@
 <?php require_once 'inc/header.php'; ?>
 
+<div class="container-fluid">
 
-<?php require_once 'inc/header.php'; ?>
+ <!-- #APROPOS -->
+<div id="apropos" class="container">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<!--Section Card-->
+    <section id="best-features" class="text-center"> 
 
-<div class="row justify-content-around">
-    <H1> Les Menus </H1>
+        <h2 class="mb-5 font-weight-bold">Nos valeurs</h2>
 
-    <div class="card my-2" style="width: 18rem;">
-        <img src="upload/M3.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Toaste Avocat</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <div class="star mt-3 align-items-center">
-            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-          <div class="cost mt-3 text-dark">
-            <span>16€ </span>
-      
-    </div>
-          <a href="#" class="btn btn-primary">Ajouter à la carte</a>
-        </div>
-        
-      </div>
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center mb-4">
+            <!--Grid column-->
+            <div class="col-md-8">
+                <!-- Description -->
+                <p class="grey-text">
+                    Notre compagnie à pour objectif la livraison à domicile des repas frais et  équilibrés.<br/>
+                    Est parfaite pour ceux qui fuient les produits industriels.<br/>
+                    On prend on considération la tendance écologique afin d’éviter le gaspillage alimentaire et protéger la planète.
+                </p>
 
-
-
-
-     
-
-
-
-
-  
-
-  
-
-   
-
+            </div>
+        </div>     
+    </section> <!-- / #APROPOS --> 
 </div>
 
-<!--Fin section card-->
-
-</body>
-</html>
 
 
 
+     <div class="container card-container">
+        <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):
+            foreach ($_SESSION['messages'] as $type => $mess):
+                foreach ($mess as $key => $message):
+        ?>
+
+        <div class="alert alert-<?= $type; ?> text-center">
+            <p><?= $message; ?></p>
+        </div>
+        <?php unset($_SESSION['messages'][$type][$key]); ?>
+        <?php endforeach; endforeach; endif; ?>
 
 
 <?php require_once 'inc/footer.php'; ?>
 
-
-
-
-<?php require_once 'inc/footer.php'; ?>
 
 

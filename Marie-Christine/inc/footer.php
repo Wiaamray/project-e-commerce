@@ -8,6 +8,12 @@
 
 <div class="contenu-footer container">
 
+<div class="location-map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.879794348156!2d2.32129261506386!3d48.84143150985569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671cb7f090e71%3A0xc34b2f2f89fb9d6f!2sPl.%20Jos%C3%A9phine%20Baker%2C%2075014%20Paris!5e0!3m2!1sfr!2sfr!4v1645673869177!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen="" loading="lazy">
+</iframe>
+</div>
+
 <div class="bloc footer-services">
     <h3>Services</h3>
     <ul class="liste-services">
@@ -22,7 +28,7 @@
     <ul>
         <h3>Contact</h3>
         <li>55-55-55-55</li>
-        <li>DeliveryFood@gmail.com</li>
+        <li>AuBonGout@gmail.com</li>
         <li>6 rue de l'invention  75007  Paris </li>
     </ul>   
 </div> <!-- / .FOOTER-CONTACT -->
@@ -41,17 +47,20 @@
 </div>
 <!-- / .FOOTER-HORAIRES -->
 
+
+
+
 </div>
 <!-- / . CONTENU-FOOTER -->
 
 <div class="footer-copyright">
-<p>&copy; 2022 Droits réservés  DeliveryFood</p>
+<p>&copy; 2022 Droits réservés Au Bon Goût</p>
 </div>
 
 </footer> <!-- / FOOTER -->
 
 </div> <!-- / .CONTAINER-FLUID begins in header.php -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="../js/app.js"></script>
+<script src="./js/app.js"></script>
 </html>
 

@@ -1,7 +1,212 @@
-body {
-    font-weight: 400;
+
+* {
+    cursor: url(../upload/asperge-default.svg),auto;
 }
 
-.card-container {
-    padding-bottom: 8rem;
+html {
+    min-height: 100%;
+    cursor: url(../upload/asperge-default.svg),auto;
 }
+
+body {
+    font-family: 'Nunito', sans-serif!important;
+    font-weight: 400;
+    cursor: url(../upload/asperge-default.svg),auto;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a:hover, a>i:hover {
+    cursor: url(../upload/asperges-link.svg), auto;
+
+}
+
+button:hover {
+    cursor: url(../upload/asperges-link.svg), auto;
+}
+li {
+    font-weight: 700;
+}
+
+.main-content {
+    padding-bottom: 4rem;
+    cursor: url(../upload/asperge-default.svg), auto!important;
+    background-image: url(../upload/Tomate.svg), url(../upload/Asperge.svg),  url(../upload/Feuilles.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right, top left, top right;
+    background-size: 500px auto, contain, 200px auto;
+}
+
+
+#apropos h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #f7aa58;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #fff;
+}
+
+#apropos p {
+    text-align: justify;
+    color: pink;
+    mix-blend-mode: difference;
+}
+
+
+/*Section card*/
+.cartes {
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(15rem, auto));
+    gap: 4vw;
+    color: #1d1d1b;
+}
+
+@media (min-width: 576px) {
+    .cartes {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .cartes {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .cartes {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .cartes {
+        max-width: 1140px;
+    }
+}
+
+
+
+.card {
+    border: none;
+    border-bottom: 1px solid #5c9544;
+    border-radius: 2rem;
+    /* box-shadow: 0 0 3rem #ddd; */
+}
+.card-body {
+    padding: 0 1rem 1rem;
+    border-right: 1px solid #f7aa58;
+    border-left: 1px solid #f7aa58;
+}
+.card-header {
+    background-image: url("../upload/vecteezy_green-seamless-pattern-cloth-graphic-simple-square-tartan_5384703.svg");
+    background-size: 3rem 3rem;
+    border: 1px solid #4ab16b;
+    border-bottom: none;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.star {
+    color: rgb(230, 230, 88);
+    text-align: center;
+}
+
+.cost span {
+    color: #F39F06;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-title {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #415a23;
+    letter-spacing: 1px;
+    border-bottom: #b9d378 1px solid;
+}
+.card-text {
+    height: 12rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0;
+    hyphens: auto;
+    overflow: hidden;
+    /*text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;      
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    background-color: #f7aa58;
+    border-color: #f7aa58;
+    border-radius: 2rem;
+}
+
+.btn:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  }
+
+.btn.ajouter  {
+color: #fff;
+transform: scale(1);
+transition: all 500ms ease;
+cursor: url(../upload/asperges-link.svg), auto;
+}
+
+.btn.ajouter:hover {
+    color: #fff;
+    background-color: #415a23!important;
+    transform: perspective(1px) rotate(5deg);    
+  }
+
+.moins-plus {
+    margin: 0 1rem;
+    padding: 0.5rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 2rem;
+    border: 4px solid #f7aa58;
+}
+
+.moins-plus a.moins,
+.moins-plus input,
+.moins-plus a.plus {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    color: #415a23;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: all 500ms ease;
+    cursor: url(../upload/asperges-link.svg), auto;
+}
+
+.moins-plus input {
+    margin-right: 0;
+    padding: 0 0 0 .75rem;
+    text-align: center;
+    border: 1.5px solid #ddd;
+    border-radius: 1.5rem;
+    
+}
+

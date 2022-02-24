@@ -94,3 +94,21 @@ if (!isset($_SESSION['cart'])):
 endif;
 
 require_once 'cart.php';
+
+// fonction permettant de retranscrire le nombre d'étoiles d'un produit en balise html (balise i et fontawsome)
+function nbEtoiles(int $nb)
+{
+    $texte = "";
+
+    for ($i = 1; $i <= $nb; $i++) {
+        $texte .= '<i class="fa fa-star"></i>';
+    }
+    return $texte;
+}
+
+// fonction permettant d'appliquer une promotion d'un pourcentage souhaité sur le prix d'un article
+function promo($price, $pourcent) :int
+{
+    $promo = $price - ($price * $pourcent);
+    return $promo;
+}
