@@ -73,10 +73,12 @@
 
     <!-- .LOGO-CONTAINER -->
     <div class="logo-container">
-        <h2>
-            <a class="navbar-brand" href="index.php">Le Panier Vert</a>
-        </h2>
-        <p>des plats sains tout l'année</p>
+        
+        <div class="logo">
+            <h2><a class="navbar-brand" href="index.php">Panier Vert</a></h2>
+        </div>
+
+        <!-- <p>des plats sains tout l'année</p> -->
     </div>
 
 
