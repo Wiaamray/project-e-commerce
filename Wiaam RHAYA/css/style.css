@@ -1,42 +1,74 @@
-
-/*A propos section*/
-
-.container{
-    margin-top:8rem;
+body {
+    font-weight: 400;
 }
-
-/*Fin A propos section*/
-
-
-
-
-
+img {
+    width: 100%;
+    height: auto;
+}
 
 /*Section card*/
-
+.cartes {
+    gap: 2vw;
+    color: #1d1d1b
+}
 .card-container {
-   margin-top: 8rem;
+    max-width: 15rem;
+    width: 20vw;
 }
 
-.star{
+.star {
     color: rgb(230, 230, 88);
+    text-align: center;
 }
 
-.cost span{
+.cost span {
     color: #F39F06;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 20px;
 }
-
-.card-text{
-    font-size:11px;
+.card {
+    border: none;
+    border-bottom: 1px dotted #5c9544;
+    border-radius: 2rem;
+}
+.card-body {
+    padding: 0 1rem 1rem;
+    border-right: 1px dotted #f7aa58;
+    border-left: 1px dotted #f7aa58;
+}
+.card-header {
+    background-image: url("../upload/vecteezy_green-seamless-pattern-cloth-graphic-simple-square-tartan_5384703.svg");
+    background-size: 3rem 3rem;
+    border-radius: .5rem .5rem 0 0;
+}
+.card-title {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #415a23;
+    letter-spacing: 1px;
+    border-bottom: #b9d378 1px solid;
+}
+.card-text {
+    height: 12rem;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0;
+    hyphens: auto;
+    overflow: hidden;
+    /*text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;      
 }
 
-
-/*Fin Card*/
-
-
-
-
-
-
+.btn-primary {
+    font-family: 'Nunito', sans-serif;
+    font-weight:900;
+    background-color: #f7aa58;
+    border-color: #f7aa58;
+    border-radius: 2rem;
+}

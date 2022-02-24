@@ -11,11 +11,13 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,900;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/details.css">
 </head>
 
 <body>
@@ -28,30 +30,27 @@
 
 <!-- . SOCIAL-MENU -->
 <div class="social-menu">
-                <!-- Social Icon  -->
+
     <ul class="navbar-nav nav-flex-icons">
-    <li class="">
-        <a class="nav-link"><i class="fab fa-facebook fa-2x"></i></a>
-    </li>
-    <li class="">
-        <a class="nav-link"><i class="fab fa-twitter fa-2x"></i></a>
-    </li>
-    <li class="">
-        <a class="nav-link"><i class="fab fa-instagram fa-2x"></i></a>
-    </li>
-</ul>
+        <li class="">
+            <a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </li>
+        <li class="">
+            <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        </li>
+        <li class="">
+            <a class="nav-link" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </li>
+    </ul>
+
 </div>
 <!-- / .SOCIAL-MENU -->
-
-
-
-
 
 
     <!-- .LOGO-CONTAINER -->
     <div class="logo-container">
         <h2>
-            <a class="navbar-brand" href="">Au Bon Goût</a>
+            <a class="navbar-brand" href="index.php">Au Bon Goût</a>
         </h2>
         <p>des plats sains tout l'année</p>
     </div>
@@ -64,13 +63,16 @@
 
         <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
 
-            <li class=""><a href="/projet/security/login.php" class="">connection</a></li>
-            <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
-            <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a>                 -->
             <li class="">
-                <a class="nav-link active" href="">
-                    <button type="button" class="btn position-relative p-2 ">
-                        <i class="fa-solid fa-cart-arrow-down fa-2xl "></i>
+                <a href="" class="connection nav-link">connection</a>
+            </li>
+            <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
+            <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a> -->
+            <li class="">
+                <a href="" class="basket nav-link" >
+                    <button type="button" class="btn position-relative p-2">
+                        <!-- <i class="fa-solid fa-cart-arrow-down fa-2xl "></i> -->
+                        <i class="fas fa-shopping-basket fa-2xl"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>
                     </button>
                 </a>
@@ -87,13 +89,13 @@
             <ul class="navbar-nav d-flex justify-content-center me-auto">
 
                 <li class="">
-                    <a class="nav-link active" href="">Accueil</a>
+                    <a class="nav-link active" href="index.php">Accueil</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="">Les menus</a>
+                    <a class="nav-link" href="#">Les menus</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="">Les plats</a>
+                    <a class="nav-link" href="#cartes">Les plats</a>
                 </li>
                 <li class="">
                     <a class="nav-link" href="#apropos">Nos Valeurs</a>
