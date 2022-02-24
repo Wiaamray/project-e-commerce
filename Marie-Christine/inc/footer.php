@@ -8,6 +8,12 @@
 
 <div class="contenu-footer container">
 
+<div class="location-map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.879794348156!2d2.32129261506386!3d48.84143150985569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671cb7f090e71%3A0xc34b2f2f89fb9d6f!2sPl.%20Jos%C3%A9phine%20Baker%2C%2075014%20Paris!5e0!3m2!1sfr!2sfr!4v1645673869177!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen="" loading="lazy">
+</iframe>
+</div>
+
 <div class="bloc footer-services">
     <h3>Services</h3>
     <ul class="liste-services">
@@ -40,6 +46,9 @@
     </ul>
 </div>
 <!-- / .FOOTER-HORAIRES -->
+
+
+
 
 </div>
 <!-- / . CONTENU-FOOTER -->
