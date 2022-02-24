@@ -8,6 +8,10 @@ footer {
     color:white;
 }
 
+footer iframe {
+    border-radius: 2px;
+}
+
 footer a {
     text-decoration: none;
 }
