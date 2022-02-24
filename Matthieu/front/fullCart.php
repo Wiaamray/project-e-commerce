@@ -64,81 +64,81 @@ if (getQuantity() == 0) :
 
 
 ?>
-    <div class="">
-        <h3 class="alert alert-warning text-center align-items-center">Votre panier est vide, allez vite commander
-            <a class="hover" href="<?= SITE; ?>">Nos merveilleux plats</a>
-        </h3>
-    </div>
-
-<?php else : ?>
-    <div class="d-flex justify-content-end">
-        <a href="?destroy=1">
-            <button class="btn btn-outline-info btn-rounded mt-3">Vider le panier</button>
-        </a>
-    </div>
-    <table class="table mt-3">
-        <thead class="thead-dark text-center">
-            <tr>
-                <th>Nom</th>
-                <th>Photo</th>
-                <th>Prix Total</th>
-                <th>
-                    Retirer
-                </th>
-                <th>Quantité</th>
-                <th>
-                    Ajouter
-                </th>
-                <th>Annuler</th>
-            </tr>
-        </thead>
-        <tbody class="text-center">
-
-            <?php foreach ($details as $item) : ?>
-                <tr>
-                    <td><?= $item['product']['name']; ?></td>
-                    <td><img height="40" width="40" src="<?= SITE . $item['product']['picture']; ?>" alt=""></td>
-
-                    <td><?= $item['total']; ?> €</td>
-                    <td>
-                        <a href="?remove=<?= $item['product']['id']; ?>">
-                            <button class="btn btn-primary text-white">-</button>
-                        </a>
-                    </td>
-                    <td><?= $item['quantity']; ?></td>
-                    <td>
-                        <a href="?add=<?= $item['product']['id']; ?>">
-                            <button class="btn btn-primary text-white">+</button>
-                        </a>
-                    </td>
-
-                    <td>
-                        <a href="?delete=<?= $item['product']['id']; ?>">
-                            <button class="btn btn-outline-danger btn-rounded">Annuler</button>
-                        </a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-
-        </tbody>
-
-    </table>
-
-    <div class="mt-3">
-        <h4>Total du panier: <?= $total; ?> €</h4>
-    </div>
-
-    <?php if (connect()) : ?>
-        <div class="d-flex justify-content-end">
-            <a href="?order=1" class="btn btn-success mt-2">Passer à la commande</a>
+        <div class="">
+            <h3 class="alert alert-warning text-center align-items-center">Votre panier est vide, allez vite commander
+                <a class="hover" href="<?= SITE; ?>">Nos merveilleux plats</a>
+            </h3>
         </div>
 
     <?php else : ?>
         <div class="d-flex justify-content-end">
-            <a href="<?= SITE . 'security/login.php'; ?>" onclick="return confirm('Vous n\'êtes pas connecté, authenfiez-vous pour passer à la commande')" class="btn btn-success mt-2">Passer à
-                la commande</a>
+            <a href="?destroy=1">
+                <button class="btn btn-outline-info btn-rounded mt-3">Vider le panier</button>
+            </a>
         </div>
-    <?php endif; ?>
+        <table class="table mt-3">
+            <thead class="thead-dark text-center">
+                <tr>
+                    <th>Nom</th>
+                    <th>Photo</th>
+                    <th>Prix Total</th>
+                    <th>
+                        Retirer
+                    </th>
+                    <th>Quantité</th>
+                    <th>
+                        Ajouter
+                    </th>
+                    <th>Annuler</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+
+                <?php foreach ($details as $item) : ?>
+                    <tr>
+                        <td><?= $item['product']['name']; ?></td>
+                        <td><img src="<?= SITE . $item['product']['picture']; ?>" alt=""></td>
+
+                        <td><?= $item['total']; ?> €</td>
+                        <td>
+                            <a href="?remove=<?= $item['product']['id']; ?>">
+                                <button class="btn btn-primary text-white">-</button>
+                            </a>
+                        </td>
+                        <td><?= $item['quantity']; ?></td>
+                        <td>
+                            <a href="?add=<?= $item['product']['id']; ?>">
+                                <button class="btn btn-primary text-white">+</button>
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="?delete=<?= $item['product']['id']; ?>">
+                                <button class="btn btn-outline-danger btn-rounded">Annuler</button>
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </tbody>
+
+        </table>
+
+        <div class="mt-3">
+            <h4>Total du panier: <?= $total; ?> €</h4>
+        </div>
+
+        <?php if (connect()) : ?>
+            <div class="d-flex justify-content-end">
+                <a href="?order=1" class="btn btn-success mt-2 mb-3">Passer à la commande</a>
+            </div>
+
+        <?php else : ?>
+            <div class="d-flex justify-content-end">
+                <a href="<?= SITE . 'security/login.php'; ?>" onclick="return confirm('Vous n\'êtes pas connecté, authenfiez-vous pour passer à la commande')" class="btn btn-success mt-2 mb-3">Passer à
+                    la commande</a>
+            </div>
+        <?php endif; ?>
 
 
 <?php endif;

@@ -10,161 +10,163 @@
           integrity="sha512-B5sIrmt97CGoPUHgazLWO0fKVVbtXgGIOayWsbp9Z5aq4DJVATpOftE/sTTL27cu+QOqpI/jpt6tldZ4SwFDZw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,900;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"> 
+    
+<?php
+
+    // pour récupérer le chemin et le nom de fichier actuel
+    $url = explode('/', $_SERVER['PHP_SELF']);
+    $urlFin = array_pop($url);
+    if ($urlFin == 'index.php' || $urlFin == 'DetailPlat.php') {
+    ?>
+
+        <!-- liens css dont le chemin est dans l'url racine -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/footer.css">
+
+    <?php } else { ?>
+
+        <!-- liens css dont le chemin est dans un sous-dossier de l'url racine -->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+
+    <?php } ?>
+
+    <!-- liens css indépendants -->
+    <link rel="stylesheet" href="../css/formulaire.css">
+    <link rel="stylesheet" href="./css/details.css">
+
+
 </head>
+
 <body>
 
 <?php require_once 'init.php';
 
 ?>
+<!-- .SITE-HEADER -->
+<div class="site-header">
+
+<!-- . SOCIAL-MENU -->
+<div class="social-menu">
+
+    <ul class="navbar-nav nav-flex-icons">
+        <li class="">
+            <a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </li>
+        <li class="">
+            <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        </li>
+        <li class="">
+            <a class="nav-link" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </li>
+    </ul>
+
+</div>
+<!-- / .SOCIAL-MENU -->
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <!-- .LOGO-CONTAINER -->
+    <div class="logo-container">
+        <h2>
+            <a class="navbar-brand" href="<?= SITE; ?>">Le Panier Vert</a>
+        </h2>
+        <p>Se faire plaisir avec des plats sains toute l'année</p>
+    </div>
+
+
+<!-- .TOP-NAVIGATION -->
+
+<!-- <nav class=" navbar navbar-expand-lg navbar-light bg-light mb-5"> -->
+<nav class="top-navigation container-fluid mb-5">
+
+        <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
+
+            <!-- <li class="">
+                <a href="" class="connection nav-link">connection</a>
+            </li> -->
+            <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
+            <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a> -->
+
+
+            <?php if (!admin() && !connect()) { ?>
+                    <li class=""><a href="<?= SITE . 'security/login.php#'; ?>" class="connection nav-link" >connection</a></li>
+                <?php } else { ?>
+                    <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
+                    <li><a href="<?= SITE; ?>?unset=1" class=""><i class="fa-solid fa-power-off fa-2x"></i></a>
+                <?php } ?>
+
+
+            <li class="">
+                <a href="<?= SITE . 'front/fullCart.php'; ?>" class="basket nav-link" >
+                    <button type="button" class="btn position-relative p-2">
+                        <!-- <i class="fa-solid fa-cart-arrow-down fa-2xl "></i> -->
+                        <i class="fas fa-shopping-basket fa-2xl"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>
+                    </button>
+                </a>
+            </li>            
+        </ul>
+
+</nav> 
+<!-- / .TOP-NAVIGATION -->
+
+
+<!-- .MAIN-NAVIGATION -->
+<nav class="main-navigation navbar navbar-expand-lg mb-5">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= SITE; ?>">DeliveryFood</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <ul class="navbar-nav d-flex justify-content-center me-auto">
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="<?= SITE; ?>">Accueil
-
-                    </a>
+                <li class="">
+                    <a class="nav-link active" href="<?= SITE; ?>">Accueil</a>
                 </li>
-                <?php if (admin()):
-
-                    ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= SITE . 'admin/ajoutProduit.php'; ?>">Ajout produit</a>
-                    </li>
-                <?php endif; ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">A propos</a>
+                <li class="">
+                    <a class="nav-link" href="<?= SITE; ?>#">Les menus</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="<?= SITE; ?>#cartes">Les plats</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="<?= SITE; ?>#apropos">A propos</a>
+                </li>
+                <!-- <li class="">
+                    <a class="nav-link" href="">Mes commandes</a>
+                </li> -->
+                <li class="">
+                    <a class="nav-link" href="">Contact</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                       aria-haspopup="true" aria-expanded="false">Toutes les offres</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Promotions</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="<?= SITE . 'front/fullCart.php'; ?>">
-                        <button type="button" class="rounded btn btn-outline-warning position-relative p-2 ">
-                            <i class="fa-solid fa-cart-arrow-down fa-2xl "></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info">
-    <?=  getQuantity() ; ?>+
-
-  </span>
-                        </button>
-                    </a>
-                </li>
             </ul>
-            
-            <?php if (!connect()):
-                ?>
-                <div class="text-center flex ">
-                    <a href="<?= SITE . 'security/login.php'; ?>" class="btn btn-secondary">Se connecter</a>
-                    <a href="<?= SITE . 'security/register.php'; ?>" class="btn btn-primary ">S'inscrire</a>
-                </div>
-           
 
-     <!--Main Navigation-->
-     <header>
-
-
-            <!-- Links -->
-
-            <!-- Social Icon  -->
-            <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fab fa-facebook fa-2x"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fab fa-twitter fa-2x"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fab fa-instagram fa-2x"></i></a>
-                </li>
-            </ul>
-        </div>
-   
     </div>
-
-</nav>
-
-
-<div id="header" class="view">
-                </div>
+</nav> <!-- / .MAIN-NAVIGATION -->
 
 
+<!-- .SEARCH-CONTAINER -->
+<div class="search-container">
 
-</header>
+    <ul class="navbar-nav me-auto">
+        <li>
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
+                <button class="my-2 my-sm-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
-<!-- Fin de header-->
+                </button>
+            </form>
+        </li>
+    </ul>
 
-
- <!--A propos section-->
-
- <main class="mt-5">
-<div class="container">
-
-    
-    <section id="best-features" class="text-center">
-
-        
-        <h2 class="mb-5 font-weight-bold">DeliveryFood</h2>
-
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center mb-4">
-
-            <!--Grid column-->
-            <div class="col-md-8">
-
-                <!-- Description -->
-                <p class="grey-text">
-                            Notre compagne à pour objectif <br/>la livraison à domicile des repas frais et  équilibrés.
-                             Est parfaite pour ceux qui fuient les produits industriels.<br/>
-                             On prend on considération la tendance écologique afin d’éviter le gaspillage alimentaire et protéger la planéte. </p>
-
-            </div>
-
-                         <!--A propos section Fin-->
+</div>
+<!-- / .SEARCH-CONTAINER -->
 
 
-
-
-
-<?php else: ?>
-                <div class="text-center ">
-                    <a href="<?= SITE . '?unset=1'; ?>" class="btn btn-primary mt-1"><i
-                                class="fa-solid fa-power-off"></i></a>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-</nav>
-<div class="container">
-    <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):
-        foreach ($_SESSION['messages'] as $type => $mess):
-            foreach ($mess as $key => $message):
-                ?>
-
-                <div class="alert alert-<?= $type; ?> text-center">
-                    <p><?= $message; ?></p>
-                </div>
-                <?php unset($_SESSION['messages'][$type][$key]); ?>
-            <?php endforeach; endforeach; endif; ?>
-
+</div>
+ <!-- / SITE-HEADER -->
 
 

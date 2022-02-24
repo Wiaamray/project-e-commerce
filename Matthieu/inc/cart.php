@@ -96,5 +96,3 @@ function getQuantity()
     return $total;
 
 }
-
-
