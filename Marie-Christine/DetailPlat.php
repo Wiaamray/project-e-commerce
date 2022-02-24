@@ -71,7 +71,7 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
 
 
       <!-- .CARD-CONTENT -->
-      <div class="card-content d-flex justify-content-between align-items-center">
+      <div id="card-content" class="card-content d-flex justify-content-between align-items-center">
 
         <!-- .CARD-LEFT-->
         <div class="card-left">
