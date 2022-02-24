@@ -1,5 +1,5 @@
-</div>
- <!-- / .CONTAINER begins in header.php-->
+
+<!-- / .CONTAINER begins in header.php-->
 
 <!-- FOOTER -->
 <footer>
@@ -20,7 +20,7 @@
     <ul>
         <h3>Contact</h3>
         <li>55-55-55-55</li>
-        <li>DeliveryFood@gmail.com</li>
+        <li>AuBonGout@gmail.com</li>
         <li>6 rue de l'invention  75007  Paris </li>
     </ul>   
 </div> <!-- / .FOOTER-CONTACT -->
@@ -43,12 +43,12 @@
 <!-- / . CONTENU-FOOTER -->
 
 <div class="footer-copyright">
-<p>&copy; 2022 Droits réservés  DeliveryFood</p>
+<p>&copy; 2022 Droits réservés Au Bon Goût</p>
 </div>
 
 </footer> <!-- / FOOTER -->
 
 </div> <!-- / .CONTAINER-FLUID begins in header.php -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="../js/app.js"></script>
+<script src="./js/app.js"></script>
 </html>

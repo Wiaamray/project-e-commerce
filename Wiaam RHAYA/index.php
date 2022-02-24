@@ -53,16 +53,8 @@ if (isset($_GET['id'])) {
     exit();
 }
 
-// fonction permettant de retranscrire le nombre d'étoiles d'un produit en balise html (balise i et fontawsome)
-function nbEtoiles(int $nb)
-{
-    $texte = "";
 
-    for ($i = 1; $i <= $nb; $i++) {
-        $texte .= '<i class="fa fa-star"></i>';
-    }
-    return $texte;
-}
+
 
 ?>
 
@@ -100,6 +92,7 @@ function nbEtoiles(int $nb)
                             endif;
                         endforeach; ?>
                         <div class="card card-container" style="max-width: 15rem;">
+                        <a class="text-decoration-none" href="<?= 'DetailPlat.php?id=' . $product['id']; ?>" target="_blank">
                             <div class="card-header text-center">
                                 <img width="150" src="<?= $product['picture']; ?>" alt="">
                             </div>
@@ -113,6 +106,7 @@ function nbEtoiles(int $nb)
                                     <span><?= $product['price']; ?> €</span>
                                 </h4>
                             </div>
+                    </a>
                             <?php if (admin()) { ?>
                                 <a href="<?= SITE . 'admin/admin.php?id=' . $product['id']; ?>" class="btn btn-primary">Modifier</a>
                                 <a href="?id=<?= $product['id']; ?>" onclick='return confirm("Êtes-vous sûr de supprimer cet article ?")' class="btn btn-danger">Supprimer</a>
@@ -123,7 +117,7 @@ function nbEtoiles(int $nb)
                             <?php } else { ?>
                                 <div class="text-center mb-3">
                                     <a href="?remove=<?= $product['id']; ?>" class="btn btn-primary">-</a>
-                                    <input class="text-center text-primary ps-3 pe-0" disabled style="width: 15%" type="number" value="<?= $quant; ?>">
+                                    <input class="text-center text-primary ps-3 pe-0" disabled style="width: 15%" type="number" value="<?= $quant ?? 0; ?>">
                                     <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="btn btn-primary">+</a>
                                 </div>
                             <?php } ?>
