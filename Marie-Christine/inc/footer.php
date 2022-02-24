@@ -28,7 +28,7 @@
     <ul>
         <h3>Contact</h3>
         <li>55-55-55-55</li>
-        <li>AuBonGout@gmail.com</li>
+        <li>lepaniervert@gmail.com</li>
         <li>6 rue de l'invention  75007  Paris </li>
     </ul>   
 </div> <!-- / .FOOTER-CONTACT -->
@@ -44,17 +44,14 @@
         <li>Sendredi 10h-24h</li>
         <li>Dimanche 10h-14h</li>
     </ul>
-</div>
-<!-- / .FOOTER-HORAIRES -->
+</div> <!-- / .FOOTER-HORAIRES -->
 
 
 
-
-</div>
-<!-- / . CONTENU-FOOTER -->
+</div> <!-- / . CONTENU-FOOTER -->
 
 <div class="footer-copyright">
-<p>&copy; 2022 Droits réservés Au Bon Goût</p>
+<p>&copy; 2022 Droits réservés Le Panier Vert</p>
 </div>
 
 </footer> <!-- / FOOTER -->
