@@ -10,7 +10,7 @@
 
 <div class="location-map">
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.879794348156!2d2.32129261506386!3d48.84143150985569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671cb7f090e71%3A0xc34b2f2f89fb9d6f!2sPl.%20Jos%C3%A9phine%20Baker%2C%2075014%20Paris!5e0!3m2!1sfr!2sfr!4v1645673869177!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen="" loading="lazy">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9448659528935!2d2.393720315675097!3d48.87832757928946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66dbe8e7bf2cd%3A0xd519369a75a3ea80!2s6%20Rue%20des%20Lilas%2C%2075019%20Paris!5e0!3m2!1sfr!2sfr!4v1645690026242!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen="" loading="lazy">
 </iframe>
 </div>
 
@@ -28,7 +28,7 @@
     <ul>
         <h3>Contact</h3>
         <li>55-55-55-55</li>
-        <li>AuBonGout@gmail.com</li>
+        <li>lepaniervert@gmail.com</li>
         <li>6 rue de l'invention  75007  Paris </li>
     </ul>   
 </div> <!-- / .FOOTER-CONTACT -->
@@ -44,17 +44,14 @@
         <li>Sendredi 10h-24h</li>
         <li>Dimanche 10h-14h</li>
     </ul>
-</div>
-<!-- / .FOOTER-HORAIRES -->
+</div> <!-- / .FOOTER-HORAIRES -->
 
 
 
-
-</div>
-<!-- / . CONTENU-FOOTER -->
+</div> <!-- / . CONTENU-FOOTER -->
 
 <div class="footer-copyright">
-<p>&copy; 2022 Droits réservés Au Bon Goût</p>
+<p>&copy; 2022 Droits réservés Le Panier Vert</p>
 </div>
 
 </footer> <!-- / FOOTER -->

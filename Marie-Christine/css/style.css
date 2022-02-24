@@ -15,7 +15,7 @@ body {
     
 }
 
-img {
+img, iframe  {
     width: 100%;
     height: auto;
 }
@@ -106,11 +106,35 @@ li {
     border: 1px solid #4ab16b;
     border-bottom: none;
     border-radius: .5rem .5rem 0 0;
+
+	display: flex;
+	height: 15vw;
+	justify-content: center;
+	align-items: center;
+
 }
 
-.star {
-    color: rgb(230, 230, 88);
-    text-align: center;
+.card-header-content {
+	width: 15vw;
+	max-width: 15rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.ratio-box {
+    width: 100%;
+	height: 0;
+	padding-top: 100%;
+	position: relative;
+    text-align: justify;
+}
+
+.card-header img {
+    position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	object-fit: cover;
 }
 
 .cost span {
@@ -138,11 +162,17 @@ li {
     letter-spacing: 0;
     hyphens: auto;
     overflow: hidden;
-    /*text-overflow: ellipsis; */
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;      
 }
+
+.star {
+    color: rgb(230, 230, 88);
+    text-align: center;
+}
+
 
 .btn {
     display: inline-block;
