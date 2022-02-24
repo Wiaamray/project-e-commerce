@@ -24,10 +24,6 @@ html, * {
     z-index: 20;
 }
 
-.social-menu .navbar-nav {
-    /* align-items: flex-start; */
-}
-
 .social-menu .navbar-nav .nav-link {
     padding: .5rem;
 }
@@ -67,12 +63,14 @@ html, * {
     font-weight: 900;
     text-shadow: 2px 2px 2px white;
 }
+
 .logo {
     position: relative;
     margin-bottom: 1rem;
     width: 24rem;
     height: 14rem;
 }
+
 .logo:before {
     content: "";
     position: absolute;
@@ -83,6 +81,7 @@ html, * {
     background-image: url(../upload/logo.svg);
     background-size: cover;
 }
+
 .logo:after {
     content: "des plats sains tout l'année";
     position: absolute;
