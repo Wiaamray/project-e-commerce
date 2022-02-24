@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -26,6 +26,8 @@
 
 ?>
 <!-- .SITE-HEADER -->
+ <!--menu Burger-->
+<div id="menu-bars" class="fas fa-bars"></div>
 <div class="site-header">
 
     <!-- .LOGO-CONTAINER -->
@@ -61,7 +63,7 @@
 
 
 <!-- .MAIN-NAVIGATION -->
-<nav class="main-navigation navbar navbar-expand-lg mb-5">
+<nav class="main-navigation navbar navbar-expand-lg mb-5" id="navbar">
     <div class="container-fluid">
             <ul class="navbar-nav d-flex justify-content-center me-auto">
 
@@ -87,8 +89,14 @@
             </ul>
 
     </div>
-</nav> <!-- / .MAIN-NAVIGATION -->
 
+
+   
+
+</nav> <!-- / .MAIN-NAVIGATION -->
+   
+
+ 
 
 <!-- .SEARCH-CONTAINER -->
 <div class="search-container">

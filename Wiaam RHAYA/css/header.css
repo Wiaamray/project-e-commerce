@@ -8,7 +8,7 @@ html, * {
     position: relative;
     height: 52.25vw; /* to fit background image size 1909px x 998px */
     text-align: center;
-    background-image: url("../upload/Header2.jpg");
+    background-image: url("../upload/Header.jpg");
     background-size: cover;
 }
 
@@ -145,6 +145,25 @@ html, * {
 } 
 
 
+/*menu-bar*/
+
+
+#menu-bars{
+width:7%;
+height:12px;
+    position:fixed;
+     left:1rem;
+    background-color: black;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+   
+   
+}
+
+
+
 /* SEARCH */
 .search-container {
     position: relative;
@@ -164,4 +183,61 @@ html, * {
 .search-container input {
     font-family: 'Open Sans', sans-serif;
     border-radius: 2rem;
+}
+
+
+
+    
+
+
+/*Responsive*/
+
+
+@media (max-width: 767px) {
+    
+
+    html{
+        font-size: 50%;
+    }
+    
+    header{
+       
+        width: 33.33%;
+    }
+
+    .main-navigation{
+       
+        display: none;
+       
+    }
+
+    #menu-bars{
+        display: initial;
+        }
+    
+}
+
+
+
+@media (min-width: 768px) and (max-width:1023px) {
+
+    .main-navigation {
+        display: none;
+       
+    }
+
+    #burger div {
+        
+        left:0;
+        top: 0;
+        height: 7%;
+        width: 60%;
+        background-color: black;
+        margin: 7% 0;
+        transition: 0.5s ease-in-out; }
+    
+        div {
+            display: block;
+        }
+ 
 }
