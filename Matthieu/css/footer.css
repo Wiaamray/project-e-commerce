@@ -1,9 +1,4 @@
-.container footer {
-    /* width: 80vw; */
-}
- 
 footer {
-    /* margin-top:200px; remplacé par padding-bottom sur .card-container */
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -13,31 +8,42 @@ footer {
     color:white;
 }
 
+footer iframe {
+    border-radius: 2px;
+}
+
 footer a {
     text-decoration: none;
 }
+
 footer ul {
     list-style: none;
     padding-left: 0;
+
+}
+
+footer li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
 }
 
 .contenu-footer {
-    /* width:1200px; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* align-items: center; */
-    /* justify-content: flex-start; */
     font-size: .75rem;
     padding: 4rem 0;
 }
 
-
 .bloc {
-    /* width:25%; */
-    /* margin: 0 30px; */
     margin: 0 4vw;
+}
+
+.footer-services,
+.footer-contact,
+.footer-horaires {
+    text-align: left;
 }
 
 .footer-services h3,
@@ -52,14 +58,9 @@ footer ul {
     padding: 5px 0;
 }
 
-
 .liste-services li, .liste-contact li {
     padding: 2px 0;
 }
-
-/* .liste-services a {
-    text-decoration:none;
-} */
 
 .footer-copyright p {
     text-align: center;

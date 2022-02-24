@@ -3,11 +3,12 @@
 // pour la déconnexion (avec le GET que l'on a inséré sur le bouton dans le header)
 if (isset($_GET['unset'])) {
     unset($_SESSION['user']);
+    unset($_SESSION['cart']);
 
     // alternative au dysfonctionnement du header
-    // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-    header("location:./");
-    exit();
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header("location:./");
+    // exit();
 }
 
 // pour le add (avec le GET que l'on a inséré sur le bouton dans l'index.php)
@@ -15,9 +16,9 @@ if (isset($_GET['add'])) {
     add($_GET['add']);
 
     // alternative au dysfonctionnement du header
-    // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-    header("location:./");
-    exit();
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header("location:./");
+    // exit();
 }
 
 // pour le remove (avec le GET que l'on a inséré sur le bouton dans l'index.php)
@@ -25,9 +26,9 @@ if (isset($_GET['remove'])) {
     remove($_GET['remove']);
 
     // alternative au dysfonctionnement du header
-    // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-    header("location:./");
-    exit();
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header("location:./");
+    // exit();
 }
 
 $resultat = executeRequete("SELECT * FROM product");
@@ -48,80 +49,83 @@ if (isset($_GET['id'])) {
     $_SESSION['messages']['success'][] = "Votre article a bien été supprimé";
 
     // alternative au dysfonctionnement du header
-    // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-    header("location:./");
-    exit();
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header("location:./");
+    // exit();
 }
 
 
 ?>
 
-<div class="container-fluid">
-    <!--A propos section-->
-    <div class="container">
+<!-- .MAIN-CONTENT -->
+<div class="content-index main-content container-fluid">
 
-        <section id="best-features" class="text-center">
+    <!-- #APROPOS -->
+    <div id="apropos" class="row text-center justify-content-center">
 
-            <h2 class="mb-5 font-weight-bold">DeliveryFood</h2>
+        <h2 class="">Nos valeurs</h2>
 
-            <!--Grid row-->
-            <div class="row d-flex justify-content-center mb-4">
-                <!--Grid column-->
-                <div class="col-md-8">
-                    <!-- Description -->
-                    <p class="grey-text">
-                        Notre compagnie a pour objectif <br />la livraison à domicile des repas frais et équilibrés.
-                        Est parfaite pour ceux qui fuient les produits industriels.<br />
-                        On prend on considération la tendance écologique afin d’éviter le gaspillage alimentaire et protéger la planète. </p>
+        <p class="col-md-6">
+            Notre compagnie à pour objectif la livraison à domicile de repas frais et équilibrés.
+            Parfait pour ceux qui fuient les produits industriels.
+            Nous prenons on considération l'impact écologique afin d’éviter le gaspillage alimentaire et protéger la planète. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam animi illo blanditiis numquam dolorem consequatur quis excepturi iste ipsa! Laboriosam molestias recusandae eligendi magnam assumenda sequi, dolorem doloremque ipsa?
+        </p>
 
-                </div>
+    </div> <!-- / #APROPOS -->
 
-                <!--A propos section Fin-->
+    <!-- Affichage des cards -->
+    <!-- .CARTES -->
+    <div class="cartes" id="cartes">
 
+        <?php foreach ($products as $product) : ?>
+            <?php $quant = 0;
+            foreach ($_SESSION['cart'] as $id => $quantity) :
+                if ($product['id'] == $id) :
+                    $quant = $quantity;
+                endif;
+            endforeach; ?>
 
+            <!-- .CARD -->
+            <div class="card card-container">
+                <a class="text-decoration-none" href="<?= 'DetailPlat.php?id=' . $product['id']; ?>">
+                    <div class="card-header text-center">
 
-                <!-- Affichage des cards -->
-                <div class="row justify-content-around">
-                    <?php foreach ($products as $product) : ?>
-                        <?php $quant = 0;
-                        foreach ($_SESSION['cart'] as $id => $quantity) :
-                            if ($product['id'] == $id) :
-                                $quant = $quantity;
-                            endif;
-                        endforeach; ?>
-                        <div class="card card-container" style="max-width: 15rem;">
-                            <a class="text-decoration-none" href="<?= 'DetailPlat.php?id=' . $product['id']; ?>" target="_blank">
-                                <div class="card-header text-center">
-                                    <img width="150" src="<?= $product['picture']; ?>" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $product['name']; ?></h5>
-                                    <p class="card-text text-center"><?= $product['description']; ?></p>
-                                    <div class="star mt-3 align-items-center">
-                                        <?= nbEtoiles($product['etoiles']); ?>
-                                    </div>
-                                    <h4 class="cost card-title">
-                                        <span><?= $product['price']; ?> €</span>
-                                    </h4>
-                                </div>
-                            </a>
-                            <?php if (admin()) { ?>
-                                <a href="<?= SITE . 'admin/admin.php?id=' . $product['id']; ?>" class="btn btn-primary">Modifier</a>
-                                <a href="?id=<?= $product['id']; ?>" onclick='return confirm("Êtes-vous sûr de supprimer cet article ?")' class="btn btn-danger">Supprimer</a>
-                            <?php } elseif ($quant == 0) { ?>
-                                <div class="text-center mb-3">
-                                    <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="btn btn-primary">Ajouter au panier</a>
-                                </div>
-                            <?php } else { ?>
-                                <div class="text-center mb-3">
-                                    <a href="?remove=<?= $product['id']; ?>" class="btn btn-primary">-</a>
-                                    <input class="text-center text-primary ps-3 pe-0" disabled style="width: 15%" type="number" value="<?= $quant ?? 0; ?>">
-                                    <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="btn btn-primary">+</a>
-                                </div>
-                            <?php } ?>
+                        <img width="150" height="150" src="<?= $product['picture']; ?>" alt="">
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $product['name']; ?></h5>
+                        <p class="card-text text-center"><?= $product['description']; ?></p>
+                        <div class="star mt-3 align-items-center">
+                            <?= nbEtoiles($product['etoiles']); ?>
                         </div>
-                    <?php endforeach; ?>
-                </div>
+                        <h4 class="cost card-title">
+                            <span><?= $product['price']; ?> €</span>
+                        </h4>
+                    </div>
+                </a>
+                <?php if (admin()) { ?>
+                    <a href="<?= SITE . 'admin/admin.php?id=' . $product['id']; ?>" class="btn">Modifier</a>
+                    <a href="?id=<?= $product['id']; ?>" onclick='return confirm("Êtes-vous sûr de supprimer cet article ?")' class="btn btn-danger">Supprimer</a>
+                <?php } elseif ($quant == 0) { ?>
+                    <div class="text-center mb-3">
+                        <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="btn ajouter">Ajouter au panier</a>
+                    </div>
+                <?php } else { ?>
+                    <div class="text-center mb-3">
+                        <div class="moins-plus">
+                            <a href="?remove=<?= $product['id']; ?>" class="moins">&ndash;</a>
+                            <input class="text-center text-primary pe-0" disabled type="number" value="<?= $quant ?? 0; ?>">
+                            <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="plus">+</a>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div><!-- / .CARD -->
 
+        <?php endforeach; ?>
 
-                <?php require_once 'inc/footer.php'; ?>
+    </div><!-- / .CARTES -->
+
+</div> <!-- .CONTENT-INDEX .MAIN-CONTENT -->
+
+<?php require_once 'inc/footer.php'; ?>

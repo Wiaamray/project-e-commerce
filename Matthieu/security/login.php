@@ -2,8 +2,10 @@
 require_once '../inc/header.php';
 
 if (connect()) :
-    header('location:../');
-    exit();
+    // alternative au dysfonctionnement du header
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header('location:../');
+    // exit();
 endif;
 
 
@@ -28,14 +30,18 @@ if (!empty($_POST)) :
             $_SESSION['messages']['success'][] = "Bienvenue " . $user['nickname'];
 
 
-            header('location:../');
-            exit();
+            // alternative au dysfonctionnement du header
+            echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+            // header('location:../');
+            //   exit();
 
         else :
             $_SESSION['messages']['danger'][] = "Erreur sur le mot de passe";
 
-            header('location:./login.php');
-            exit();
+            // alternative au dysfonctionnement du header
+            echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+            // header('location:./login.php');
+            // exit();
 
         endif;
 
@@ -43,15 +49,19 @@ if (!empty($_POST)) :
 
         $_SESSION['messages']['danger'][] = "Aucun compte n'est existant à cette adresse mail";
 
-        header('location:./login.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+        // header('location:./login.php');
+        // exit();
 
 
     elseif ($resultat->rowCount() > 1) :
         $_SESSION['messages']['danger'][] = "Une erreur est survenue, merci de contacter l'administrateur du site";
 
-        header('location:./login.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+        // header('location:./login.php');
+        // exit();
 
     endif;
 

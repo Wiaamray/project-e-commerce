@@ -9,6 +9,7 @@ session_start();
 // chemin du site
 // define('SITE', '/project-e-commerce/');
 define('SITE', '/project-e-commerce/Matthieu/');
+define('BASE_URL', 'http://127.0.0.1/project-e-commerce/Matthieu/');
 
 // variable d'affichage
 
