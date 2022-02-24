@@ -88,8 +88,11 @@ if (isset($_GET['id'])) {
         <div class="card card-container">
         <a class="text-decoration-none" href="<?= 'DetailPlat.php?id=' . $product['id']; ?>" target="_blank">
             <div class="card-header text-center">
-
-                <img width="150" height="150" src="<?= $product['picture']; ?>" alt="">
+                <div class="card-header-content">
+                    <div class="ratio-box">
+                        <img width="<?= $product['width']; ?>" height="<?= $product['height']; ?>" src="<?= $product['picture']; ?>" alt="">
+                    </div>
+                </div>
             </div>
 
             <div class="card-body">
