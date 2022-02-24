@@ -1,6 +1,15 @@
 
 <?php
 
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
+
+?>
+
+
+<?php
+
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -20,12 +29,22 @@ try {
     $mail->Username   = 'user@example.com';                     //SMTP username
     $mail->Password   = 'secret';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                      ?>
+    $mail->Port       = 465; 
 
+    //Destinataires
+    $mail->addAddress("wihemray@gmail.com");
+    //Expéditeur//
+    $mail->setForm("");
+    //contenu
+    $mail->subject = "sujet du message"; 
+    $mail->body = "Message";  
+    // On envoie
+      $mail->send();
+      echo "Message envoyé" 
+    
+    
 
-<?php
-
-  if (isset($_POST["submit"])) {
+  if (!isset($_POST["submit"])) {
     $nom = $_POST["nom"];
     $email = $_POST["email"];
     $sujet = $_POST["sujet"];
@@ -36,11 +55,7 @@ try {
 
     $message = "nom: {$nom} email: {$email} sujet: {$sujet}  Message: " . $message;
 
-    
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
- 
+  
     $headers .= 'From: wihemray@gmail.com';
 
     $mail = mail($to,$subject,$message,$headers);

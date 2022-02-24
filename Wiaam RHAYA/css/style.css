@@ -65,26 +65,10 @@ li {
     color: #1d1d1b;
 }
 
-@media (min-width: 576px) {
-    .cartes {
-        max-width: 540px;
-    }
-}
-@media (min-width: 768px) {
-    .cartes {
-        max-width: 720px;
-    }
-}
-@media (min-width: 992px) {
-    .cartes {
-        max-width: 960px;
-    }
-}
-@media (min-width: 1200px) {
-    .cartes {
-        max-width: 1140px;
-    }
-}
+
+
+
+
 
 
 
@@ -155,10 +139,12 @@ li {
 }
 
 .btn:active {
+
     transform: translate(0px, 5px);
     -webkit-transform: translate(0px, 5px);
     box-shadow: 0px 1px 0px 0px;
   }
+
 
 .btn.ajouter  {
 color: #fff;
@@ -207,4 +193,31 @@ cursor: url(../upload/asperges-link.svg), auto;
     border: 1.5px solid #ddd;
     border-radius: 1.5rem;
     
+}
+
+
+
+
+/*Responsive*/
+
+
+@media (min-width: 576px) {
+    .cartes {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .cartes {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .cartes {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .cartes {
+        max-width: 1140px;
+    }
 }
