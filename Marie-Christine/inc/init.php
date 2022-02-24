@@ -1,13 +1,14 @@
 <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=site_ecommerce', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+$pdo = new PDO('mysql:host=localhost;dbname=projetphp', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
 // initiation de la session
 session_start();
 
 
 // chemin du site
-define('SITE', '/projet/');
+// define('SITE', '/project-e-commerce/');
+define('SITE', '/project-e-commerce/Marie-Christine/');
 
 // variable d'affichage
 
@@ -95,3 +96,20 @@ endif;
 require_once 'cart.php';
 
 
+// fonction permettant de retranscrire le nombre d'étoiles d'un produit en balise html (balise i et fontawsome)
+function nbEtoiles(int $nb)
+{
+    $texte = "";
+
+    for ($i = 1; $i <= $nb; $i++) {
+        $texte .= '<i class="fa fa-star"></i>';
+    }
+    return $texte;
+}
+
+// fonction permettant d'appliquer une promotion d'un pourcentage souhaité sur le prix d'un article
+function promo($price, $pourcent) :int
+{
+    $promo = $price - ($price * $pourcent);
+    return $promo;
+}

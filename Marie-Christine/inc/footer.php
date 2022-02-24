@@ -8,6 +8,12 @@
 
 <div class="contenu-footer container">
 
+<div class="location-map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9448659528935!2d2.393720315675097!3d48.87832757928946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66dbe8e7bf2cd%3A0xd519369a75a3ea80!2s6%20Rue%20des%20Lilas%2C%2075019%20Paris!5e0!3m2!1sfr!2sfr!4v1645690026242!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen="" loading="lazy">
+</iframe>
+</div>
+
 <div class="bloc footer-services">
     <h3>Services</h3>
     <ul class="liste-services">
@@ -22,7 +28,7 @@
     <ul>
         <h3>Contact</h3>
         <li>55-55-55-55</li>
-        <li>DeliveryFood@gmail.com</li>
+        <li>lepaniervert@gmail.com</li>
         <li>6 rue de l'invention  75007  Paris </li>
     </ul>   
 </div> <!-- / .FOOTER-CONTACT -->
@@ -38,20 +44,20 @@
         <li>Sendredi 10h-24h</li>
         <li>Dimanche 10h-14h</li>
     </ul>
-</div>
-<!-- / .FOOTER-HORAIRES -->
+</div> <!-- / .FOOTER-HORAIRES -->
 
-</div>
-<!-- / . CONTENU-FOOTER -->
+
+
+</div> <!-- / . CONTENU-FOOTER -->
 
 <div class="footer-copyright">
-<p>&copy; 2022 Droits réservés  DeliveryFood</p>
+<p>&copy; 2022 Droits réservés Le Panier Vert</p>
 </div>
 
 </footer> <!-- / FOOTER -->
 
 </div> <!-- / .CONTAINER-FLUID begins in header.php -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="../js/app.js"></script>
+<script src="./js/app.js"></script>
 </html>
 

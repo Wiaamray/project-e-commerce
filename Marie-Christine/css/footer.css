@@ -8,6 +8,10 @@ footer {
     color:white;
 }
 
+footer iframe {
+    border-radius: 2px;
+}
+
 footer a {
     text-decoration: none;
 }
@@ -15,6 +19,12 @@ footer a {
 footer ul {
     list-style: none;
     padding-left: 0;
+
+}
+
+footer li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
 }
 
 .contenu-footer {
