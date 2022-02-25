@@ -80,7 +80,7 @@ if (getQuantity() == 0) :
 
         <div class="container">
         <h3 class="alert alert-warning text-center align-items-center">Votre panier est vide, allez vite le remplir =>
-            <a class="hover" href="<?= SITE; ?>">Nos Bijoux</a>
+            <a class="hover" href="<?= SITE; ?>">nos merveilleux plats</a>
         </h3>
     </div>
 

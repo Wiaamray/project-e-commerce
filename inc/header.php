@@ -20,13 +20,14 @@
     // pour récupérer le chemin et le nom de fichier actuel
     $url = explode('/', $_SERVER['PHP_SELF']);
     $urlFin = array_pop($url);
-    if ($urlFin == 'index.php' || $urlFin == 'DetailPlat.php') {
+    if ($urlFin == 'index.php' || $urlFin == 'DetailPlat.php' || $urlFin == 'contactez-nous.php') {
     ?>
 
         <!-- liens css dont le chemin est dans l'url racine -->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/contact.css">
 
     <?php } else { ?>
 
@@ -40,7 +41,6 @@
     <!-- liens css indépendants -->
     <link rel="stylesheet" href="../css/formulaire.css">
     <link rel="stylesheet" href="./css/details.css">
-    <link rel="stylesheet" href="./css/contact.css">
 
 </head>
 
@@ -127,7 +127,7 @@
                     <a class="nav-link" href="<?= SITE; ?>#apropos">A propos</a>
                 </li>
                 <li class="">
-                <a class="nav-link" href="<?= SITE; ?>contactez-nous.php" target="_blank">Contact</a>
+                <a class="nav-link" href="<?= SITE; ?>contactez-nous.php#contactez-nous">Contact</a>
                 </li>
 
             </ul>
