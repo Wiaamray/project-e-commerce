@@ -1,17 +1,17 @@
 
 * {
-    cursor: url(../upload/asperge-default.svg),auto;
+    cursor: url(../upload/asperges-link.svg),auto;
 }
 
 html {
     min-height: 100%;
-    cursor: url(../upload/asperge-default.svg),auto;
+    cursor: url(../upload/asperges-link.svg),auto;
 }
 
 body {
     font-family: 'Nunito', sans-serif!important;
     font-weight: 400;
-    cursor: url(../upload/asperge-default.svg),auto;
+    cursor: url(../upload/asperges-link.svg),auto;
     
 }
 
@@ -21,12 +21,15 @@ img, iframe  {
 }
 
 a:hover, a>i:hover {
-    cursor: url(../upload/asperges-link.svg), auto;
+    cursor: url(../upload/asperge-default.svg), auto;
 
+}
+a:hover *, button:hover {
+    cursor: url(../upload/asperge-default.svg), auto;
 }
 
 button:hover {
-    cursor: url(../upload/asperges-link.svg), auto;
+    cursor: url(../upload/asperge-default.svg), auto;
 }
 li {
     font-weight: 700;
@@ -34,7 +37,7 @@ li {
 
 .main-content {
     padding-bottom: 4rem;
-    cursor: url(../upload/asperge-default.svg), auto!important;
+    cursor: url(../upload/asperges-link.svg), auto!important;
     background-image: url(../upload/Tomate.svg), url(../upload/Asperge.svg),  url(../upload/Feuilles.svg);
     background-repeat: no-repeat;
     background-position: bottom right, top left, top right;
@@ -97,9 +100,7 @@ li {
 }
 
 .card-body {
-    padding: 0 1rem 1rem;
-    /* border-right: 1px solid #f7aa58;
-    border-left: 1px solid #f7aa58; */
+    padding: 0 1.25rem 1rem;
 }
 
 .card-header {
@@ -195,7 +196,7 @@ li {
 color: #fff;
 transform: scale(1);
 transition: all 500ms ease;
-cursor: url(../upload/asperges-link.svg), auto;
+cursor: url(../upload/asperge-default.svg), auto;
 }
 
 .btn.ajouter:hover {
@@ -228,7 +229,7 @@ cursor: url(../upload/asperges-link.svg), auto;
     font-size: 1rem;
     font-weight: 900;
     transition: all 500ms ease;
-    cursor: url(../upload/asperges-link.svg), auto;
+    cursor: url(../upload/asperge-default.svg), auto;
 }
 
 .moins-plus input {
@@ -276,18 +277,116 @@ cursor: url(../upload/asperges-link.svg), auto;
 .btn.inscription {
     letter-spacing: 3px;
     transition: all 500ms ease;
-    cursor: url(../upload/asperges-link.svg), auto;    
+    cursor: url(../upload/asperge-default.svg), auto;    
 }
 
 .btn.se-connecter:hover,
 .btn.inscription:hover {
     color: #fff;
     background-color: #415a23!important;
-    cursor: url(../upload/asperges-link.svg), auto;    
+    cursor: url(../upload/asperge-default.svg), auto;    
 }
 
 /* Vider le panier */
 .btn.vider {
     background-color: #e17a67;
     border-color:#e17a67;
+}
+
+
+/* Achats */
+
+.content-full-cart {
+    padding-bottom: 4rem;
+    cursor: url(../upload/asperges-link.svg), auto!important;
+}
+.content-full-cart.main-content {
+    background-image: none;
+}
+
+.achat-produits {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border: none;
+    border-bottom: 1px solid #5c9544;
+    border-radius: 2rem;
+    box-shadow: 0 0 3rem #ddd;
+
+}
+
+.grille-produit {
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 10rem auto;
+    grid-template-rows: 10rem;
+    gap: 2rem;
+    border-radius: 4px;
+    border-bottom: 1px solid #5c9544;
+}
+
+.product-name {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product-total {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-calcul {
+    background: #f7aa58;
+    border-radius: 4rem;
+}
+
+.product-calcul p,
+.product-calcul .btn {
+    margin: 0;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.product-calcul .btn {
+    background: #fff;
+    color:#415a23;
+}
+
+.product-calcul .remove .btn,
+.product-calcul .cancel .btn {
+    background: #fff;
+    color:#415a23;
+}
+.product-calcul .btn:hover,
+.product-calcul p:hover,
+.execute-command.btn {
+    transition: all 500ms ease;
+    cursor: url(../upload/asperge-default.svg), auto;    
+}
+
+.total-produits {    
+    width: 60%;
+    margin: 0 auto;
+}
+
+.total-produits h4 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.execute-command {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.execute-command .btn {
+    background-color: #96ae32;
+    border-color: #96ae32;
 }

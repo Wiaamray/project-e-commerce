@@ -5,6 +5,7 @@ html, * {
 }
 
 .site-header {
+    padding-top:2rem;
     position: relative;
     height: 52.25vw; /* to fit background image size 1909px x 998px */
     text-align: center;
@@ -16,7 +17,8 @@ html, * {
 .social-menu {
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    left: 0;
+    right:0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,7 +33,7 @@ html, * {
 .social-menu .navbar-nav .nav-link:hover {
     transform: rotate(15deg);
     transition: all 500ms ease;
-    cursor: url(../upload/asperges-link.svg), auto;
+    cursor: url(../upload/asperge-default.svg), auto;
 }
 
 .fab {
@@ -53,7 +55,7 @@ html, * {
     padding: 0;
 }
 
-.logo-container h2 a {
+.logo-container h2 {
     margin-left: -100000px;
     padding: 0;
     font-family: 'Mystery Quest', cursive; 
@@ -107,7 +109,7 @@ html, * {
 .top-navigation a button:hover,
 .top-navigation a button i:hover
 .top-navigation a button i span:hover {
-    cursor: url(../upload/asperges-link.svg), auto;
+    cursor: url(../upload/asperge-default.svg), auto;
     transition: all 500ms ease;
 }
 
@@ -128,7 +130,28 @@ a.connection {
     font-weight: 900;    
     transform: rotate(-15deg);
     transition: all 500ms ease;
+    cursor: url(../upload/asperge-default.svg), auto;
+    transition: all 500ms ease;
 } 
+
+a.deconnection {
+    display: block;
+    position: relative;
+    top: 0.5rem;
+    left: 1.5rem;
+}
+
+.fa-power-off {
+    color: #e05929;
+
+}
+
+.fa-power-off:hover {
+    transform: rotate(360deg);
+    transition: all 1000ms ease-in-out;
+    cursor: url(../upload/asperge-default.svg), auto;
+    transition: all 500ms ease;
+}
 
 .basket .btn {
     background-color: #5c9544;
@@ -174,7 +197,7 @@ a.connection {
 .main-navigation a:hover {
     color: orange;
     font-weight: 900;
-    cursor: url(../upload/asperges-link.svg), auto;
+    cursor: url(../upload/asperge-default.svg), auto;
     transform: rotate(-10deg);
     transition: all 500ms ease;
 } 
