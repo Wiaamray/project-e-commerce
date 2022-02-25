@@ -16,7 +16,7 @@ if (isset($_GET['add'])) {
     add($_GET['add']);
 
     // alternative au dysfonctionnement du header
-    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    echo '<script>window.location=' . '"' . BASE_URL . '#card'. $_GET['add'] . '"' . '</script>';
     // header("location:./");
     // exit();
 }
@@ -26,7 +26,7 @@ if (isset($_GET['remove'])) {
     remove($_GET['remove']);
 
     // alternative au dysfonctionnement du header
-    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    echo '<script>window.location=' . '"' . BASE_URL . '#card'. $_GET['remove'] . '"' . '</script>';
     // header("location:./");
     // exit();
 }
@@ -85,7 +85,7 @@ if (isset($_GET['id'])) {
             endforeach; ?>
 
         <!-- .CARD -->
-        <div class="card card-container">
+        <div id="card<?= $product['id']; ?>" class="card card-container">
         <a class="text-decoration-none" href="<?= 'DetailPlat.php?id=' . $product['id'] . '#card-content'; ?>">
             <div class="card-header text-center">
                 <div class="card-header-content">
