@@ -11,40 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest" rel="stylesheet">
-
-    <?php
-
-    // pour récupérer le chemin et le nom de fichier actuel
-    $url = explode('/', $_SERVER['PHP_SELF']);
-    $urlFin = array_pop($url);
-    if ($urlFin == 'index.php' || $urlFin == 'DetailPlat.php') {
-    ?>
-
-        <!-- liens css dont le chemin est dans l'url racine -->
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/footer.css">
-
-    <?php } else { ?>
-
-        <!-- liens css dont le chemin est dans un sous-dossier de l'url racine -->
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-
-    <?php } ?>
-
-    <!-- liens css indépendants -->
-    <link rel="stylesheet" href="../css/formulaire.css">
-    <link rel="stylesheet" href="./css/details.css">
+    <!-- liens css dont le chemin est dans l'url racine -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/contact.css">
+
 </head>
 
 <body>
 
-    <?php require_once 'init.php';
+    <?php require_once 'inc/init.php';
 
     ?>
+
     <!-- .SITE-HEADER -->
     <div class="site-header">
 
@@ -68,10 +48,13 @@
 
         <!-- .LOGO-CONTAINER -->
         <div class="logo-container">
-            <h2>
-                <a class="navbar-brand" href="">Au Bon Goût</a>
-            </h2>
-            <p>des plats sains toute l'année</p>
+
+            <a class="navbar-brand" href="<?= SITE; ?>">
+                <div class="logo">
+                    <h2>Panier Vert</h2>
+                </div>
+            </a>
+            <!-- <p>des plats sains toute l'année</p> -->
         </div>
 
         <!-- .TOP-NAVIGATION -->
@@ -101,55 +84,62 @@
         </nav>
         <!-- / .TOP-NAVIGATION -->
 
+        <div class="container">
+            <div class="contact-form-group">
+                <div class="contact-info">
+                    <h3 class="title">Contactez-nous</h3>
+                    <!-- <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                        dolorum adipisci recusandae praesentium dicta!
+                    </p> -->
 
-        <!-- .MAIN-NAVIGATION -->
-        <nav class="main-navigation navbar navbar-expand-lg mb-5">
-            <div class="container-fluid">
-                <ul class="navbar-nav d-flex justify-content-center me-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Les menus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cartes">Les plats</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#apropos">A propos</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                    <a class="nav-link" href="">Mes commandes</a>
-                </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= SITE; ?>contactez-nous.php" target="_blank">Contact</a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </nav> <!-- / .MAIN-NAVIGATION -->
+                    <div class="info">
+                        <div class="information">
+                            <i class="fas fa-address-card" class="icon"></i>
+                            <p>6 rue de l'invention 75007 Paris</p>
+                        </div>
+                        <div class="information">
+                            <i class="fa fa-envelope" aria-hidden="true" class="icon"></i>
+                            <p>DeliveryFood@gmail.com</p>
+                        </div>
+                        <div class="information">
+                            <i class="fa-solid fa-phone" class="icon"></i>
+                            <p>55-55-55-55</p>
+                        </div>
+                    </div>
+                </div>
 
 
-        <!-- .SEARCH-CONTAINER -->
-        <div class="search-container">
+                <div class="contact-form">
 
-            <ul class="navbar-nav me-auto">
-                <li>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
-                        <button class="my-2 my-sm-0" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
 
-                        </button>
+                    <form action="contact.php" method="post" enctype="multipart/form-data">
+                        <h3 class="title"></h3>
+                        <div class="input-container">
+                            <input type="text" name="nom" id="name" class="contact-input" placeholder="Votre Nom" />
+                            <label for="nom"></label>
+
+                        </div>
+                        <div class="input-container">
+                            <input type="email" name="email" id="email" class="contact-input" placeholder="Votre Email" />
+                            <label for="email"></label>
+
+                        </div>
+                        <div class="input-container">
+                            <input type="text" name="sujet" id="sujet" class="contact-input" placeholder=" Sujet de votre message" />
+                            <label for="sujet"></label>
+
+                        </div>
+                        <div class="input-container textarea">
+                            <textarea name="message" id="message" class="contact-input" placeholder="Ecrire un message"></textarea>
+                            <label for="message"></label>
+
+                        </div>
+                        <input type="submit" name="submit" value="Envoyer" class="contact-btn" />
                     </form>
-                </li>
-            </ul>
-
+                </div>
+            </div>
         </div>
-        <!-- / .SEARCH-CONTAINER -->
+</body>
 
-
-    </div>
-    <!-- / SITE-HEADER -->
+</html>

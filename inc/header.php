@@ -40,7 +40,7 @@
     <!-- liens css indépendants -->
     <link rel="stylesheet" href="../css/formulaire.css">
     <link rel="stylesheet" href="./css/details.css">
-
+    <link rel="stylesheet" href="./css/contact.css">
 
 </head>
 
@@ -74,12 +74,12 @@
     <!-- .LOGO-CONTAINER -->
     <div class="logo-container">
         
-    <a class="navbar-brand" href="index.php">
+    <a class="navbar-brand" href="<?= SITE; ?>">
         <div class="logo">
             <h2>Panier Vert</h2>
         </div>
         </a>
-        <!-- <p>des plats sains tout l'année</p> -->
+        <!-- <p>des plats sains toute l'année</p> -->
     </div>
 
 
@@ -140,7 +140,7 @@
                     <a class="nav-link" href="">Mes commandes</a>
                 </li> -->
                 <li class="">
-                    <a class="nav-link" href="">Contact</a>
+                <a class="nav-link" href="<?= SITE; ?>contactez-nous.php" target="_blank">Contact</a>
                 </li>
 
             </ul>
