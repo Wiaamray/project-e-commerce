@@ -8,7 +8,7 @@ session_start();
 
 // chemin du site
 // define('SITE', '/project-e-commerce/');
-define('SITE', '/project-e-commerce/Wiaam RHAYA/');
+define('SITE', '/project-e-commerce/Marie-Christine/');
 
 // variable d'affichage
 
@@ -94,6 +94,7 @@ if (!isset($_SESSION['cart'])):
 endif;
 
 require_once 'cart.php';
+
 
 // fonction permettant de retranscrire le nombre d'étoiles d'un produit en balise html (balise i et fontawsome)
 function nbEtoiles(int $nb)

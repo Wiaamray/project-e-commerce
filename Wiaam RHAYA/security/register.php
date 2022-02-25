@@ -1,12 +1,11 @@
-
 <?php
-
-
 require_once '../inc/header.php';
-if (connect()) :
-    header('location:../');
-    exit();
-endif;
+if (connect()){
+    // alternative au dysfonctionnement du header
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header('location:../');
+    // exit();
+}
 
 
 
@@ -46,22 +45,28 @@ if (!empty($_POST)) :
     if ($resultat->rowCount() !== 0) :
         $_SESSION['messages']['danger'][] = "Un compte est déjà existant à cette adresse mail";
 
-        header('location:./register.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/register.php"' . '</script>';
+        // header('location:./register.php');
+        // exit();
     endif;
 
     if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) :
         $_SESSION['messages']['danger'][] = "email invalide";
 
-        header('location:./register.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/register.php"' . '</script>';
+        // header('location:./register.php');
+        // exit();
     endif;
 
     if (!password_strength_check($_POST['password'])) :
 
         $_SESSION['messages']['danger'][] = "Votre mot de passe doit contenir au minimum 6 caractères, maximum 15 caractères,majuscule, minuscule et un caractère spécial ! # @ % & * + - .";
-        header('location:./register.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/register.php"' . '</script>';
+        // header('location:./register.php');
+        // exit();
 
     endif;
 
@@ -80,15 +85,19 @@ if (!empty($_POST)) :
 
         $_SESSION['messages']['success'][] = "Félicitation, vous êtes à présent inscrit";
 
-        header('location:./login.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+        // header('location:./login.php');
+        // exit();
 
     else :
 
         $_SESSION['messages']['danger'][] = "Les mots de passe ne correspondent pas";
 
-        header('location:./register.php');
-        exit();
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/register.php"' . '</script>';
+        // header('location:./register.php');
+        // exit();
 
     endif;
 
