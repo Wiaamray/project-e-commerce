@@ -357,11 +357,18 @@ cursor: url(../upload/asperge-default.svg), auto;
     color:#415a23;
 }
 
+
 .product-calcul .remove .btn,
 .product-calcul .cancel .btn {
     background: #fff;
     color:#415a23;
 }
+
+.product-calcul .cancel .btn {
+    background: #e6e6e6;
+    font-size: .75rem;
+}
+
 .product-calcul .btn:hover,
 .product-calcul p:hover,
 .execute-command.btn {

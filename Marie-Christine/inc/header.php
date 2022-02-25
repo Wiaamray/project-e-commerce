@@ -74,33 +74,23 @@
     <!-- .LOGO-CONTAINER -->
     <div class="logo-container">
         
-    <a class="navbar-brand" href="index.php">
+    <a class="navbar-brand" href="<?= SITE ; ?>">
         <div class="logo">
             <h2>Panier Vert</h2>
         </div>
         </a>
-        <!-- <p>des plats sains tout l'année</p> -->
     </div>
 
 
 <!-- .TOP-NAVIGATION -->
 
-<!-- <nav class=" navbar navbar-expand-lg navbar-light bg-light mb-5"> -->
 <nav class="top-navigation container-fluid mb-5">
 
         <ul class="navbar-nav d-flex flex-row justify-content-end align-items-baseline me-auto">
 
-            <!-- <li class="">
-                <a href="" class="connection nav-link">connection</a>
-            </li> -->
-            <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
-            <!-- <li><a href="/projet/?unset=1" class=""><i class="fa-solid fa-power-off"></i></a> -->
-
-
             <?php if (!admin() && !connect()) { ?>
                     <li class=""><a href="<?= SITE . 'security/login.php#login-card'; ?>" class="connection nav-link" >connection</a></li>
                 <?php } else { ?>
-                    <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
                     <li><a href="<?= SITE; ?>?unset=1" class="deconnection nav-link"><i class="fa-solid fa-power-off fa-2x"></i></a>
                 <?php } ?>
 
@@ -136,9 +126,6 @@
                 <li class="">
                     <a class="nav-link" href="<?= SITE; ?>#apropos">A propos</a>
                 </li>
-                <!-- <li class="">
-                    <a class="nav-link" href="">Mes commandes</a>
-                </li> -->
                 <li class="">
                     <a class="nav-link" href="">Contact</a>
                 </li>

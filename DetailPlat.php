@@ -56,7 +56,6 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
       <!-- .CLOSE-BUTTON-CONTAINER -->
       <div class="close-button-container d-flex justify-content-end">
         <!-- Bouton fermeture de la page -->
-        <!-- <i class="fa-solid fa-xmark fa-2x d-flex justify-content-end mr-2 mt-2" onclick=window.close()></i> -->
         <button class="" onclick='<?= 'window.location=' . '"' . BASE_URL . '"'; ?>'>
           <span class="croix"></span>
         </button>
