@@ -65,7 +65,7 @@ if (isset($_GET['id'])) {
             <h2 class="">Nos valeurs</h2>
 
             <p class="col-md-8">
-                Notre compagnie à pour objectif la vente de repas frais et équilibrés. 
+                Notre compagnie a pour objectif la vente de repas frais et équilibrés. 
                 Parfait pour ceux qui fuient les produits industriels. 
                 Nous prenons on considération l'impact écologique afin d’éviter le gaspillage alimentaire et protéger la planète. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam animi illo blanditiis numquam dolorem consequatur quis excepturi iste ipsa! Laboriosam molestias recusandae eligendi magnam assumenda sequi, dolorem doloremque ipsa?
             </p>
