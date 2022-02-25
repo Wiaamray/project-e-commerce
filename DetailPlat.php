@@ -16,7 +16,7 @@ if (isset($_GET['add'])) {
   add($_GET['add']);
 
   // alternative au dysfonctionnement du header
-  echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+  echo '<script>window.location=' . '"' . BASE_URL . 'DetailPlat.php?id='. $_GET['add'] . '#card-content"' . '</script>';
   // header("location:./");
   // exit();
 }
@@ -26,7 +26,7 @@ if (isset($_GET['remove'])) {
   remove($_GET['remove']);
 
   // alternative au dysfonctionnement du header
-  echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+  echo '<script>window.location=' . '"' . BASE_URL . 'DetailPlat.php?id='. $_GET['remove'] . '#card-content"' . '</script>';
   // header("location:./");
   // exit();
 }
@@ -56,7 +56,7 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
       <!-- .CLOSE-BUTTON-CONTAINER -->
       <div class="close-button-container d-flex justify-content-end">
         <!-- Bouton fermeture de la page -->
-        <button class="" onclick='<?= 'window.location=' . '"' . BASE_URL . '"'; ?>'>
+        <button class="" onclick='<?= 'window.location=' . '"' . BASE_URL . '#cartes"'; ?>'>
           <span class="croix"></span>
         </button>
       </div>

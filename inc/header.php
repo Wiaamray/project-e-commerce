@@ -96,7 +96,7 @@
 
 
             <li class="">
-                <a href="<?= SITE . 'front/fullCart.php'; ?>" class="basket nav-link" >
+                <a href="<?= SITE . 'front/fullCart.php#fullCart'; ?>" class="basket nav-link" >
                     <button type="button" class="btn position-relative p-2">
                         <i class="fas fa-shopping-basket fa-2xl"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>

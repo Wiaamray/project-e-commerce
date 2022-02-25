@@ -7,7 +7,7 @@ if (isset($_GET['add'])) :
     add($_GET['add']);
 
     // alternative au dysfonctionnement du header
-    echo '<script>window.location=' . '"' . BASE_URL . 'front/fullCart.php"' . '</script>';
+    echo '<script>window.location=' . '"' . BASE_URL . 'front/fullCart.php#fullCart"' . '</script>';
 // header("location:./fullCart.php");
 // exit();
 endif;
@@ -16,7 +16,7 @@ if (isset($_GET['remove'])) :
     remove($_GET['remove']);
 
     // alternative au dysfonctionnement du header
-    echo '<script>window.location=' . '"' . BASE_URL . 'front/fullCart.php"' . '</script>';
+    echo '<script>window.location=' . '"' . BASE_URL . 'front/fullCart.php#fullCart"' . '</script>';
 // header("location:./fullCart.php");
 // exit();
 endif;
@@ -25,7 +25,7 @@ if (isset($_GET['delete'])) :
     delete($_GET['delete']);
 
     // alternative au dysfonctionnement du header
-    echo '<script>window.location=' . '"' . BASE_URL . 'front/fullCart.php"' . '</script>';
+    echo '<script>window.location=' . '"' . BASE_URL . 'front/fullCart.php#fullCart"' . '</script>';
 // header("location:./fullCart.php");
 // exit();
 endif;
@@ -86,7 +86,7 @@ if (getQuantity() == 0) :
 
     <?php else : ?>
 <!-- .MAIN-CONTENT -->
-<div class="content-full-cart main-content container-fluid">
+<div id="fullCart" class="content-full-cart main-content container-fluid">
 
 
      <!-- ACHAT-PRODUIT -->
