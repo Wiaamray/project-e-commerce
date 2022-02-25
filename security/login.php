@@ -1,69 +1,75 @@
 <?php
- require_once '../inc/header.php';
+require_once '../inc/header.php';
 
-if (connect()):
-    header('location:../');
-    exit();
+if (connect()) :
+    // alternative au dysfonctionnement du header
+    echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+    // header('location:../');
+    // exit();
 endif;
 
 
 
-if(!empty($_POST)):
+if (!empty($_POST)) :
 
-     $resultat=executeRequete("SELECT * FROM user WHERE email=:email",array(
-             ':email'=>$_POST['email']
-     ));
-
-
-     if ($resultat->rowCount() == 1):
-
-         $user=$resultat->fetch(PDO::FETCH_ASSOC);
-
-         if(password_verify($_POST['password'], $user['password'])):
+    $resultat = executeRequete("SELECT * FROM user WHERE email=:email", array(
+        ':email' => $_POST['email']
+    ));
 
 
+    if ($resultat->rowCount() == 1) :
 
+        $user = $resultat->fetch(PDO::FETCH_ASSOC);
 
-              $_SESSION['user']=$user;
-              $_SESSION['messages']['success'][]="Bienvenue ".$user['nickname'];
-
-
-              header('location:../');
-              exit();
-
-         else:
-             $_SESSION['messages']['danger'][]="Erreur sur le mot de passe";
-
-             header('location:./login.php');
-             exit();
-
-         endif;
-
-     elseif ($resultat->rowCount() == 0):
-
-         $_SESSION['messages']['danger'][]="Aucun compte n'est existant à cette adresse mail";
-
-         header('location:./login.php');
-         exit();
-
-
-     elseif ($resultat->rowCount() > 1):
-         $_SESSION['messages']['danger'][]="Une erreur est survenue, merci de contacter l'administrateur du site";
-
-         header('location:./login.php');
-         exit();
-
-     endif;
-
-
-
- endif;
+        if (password_verify($_POST['password'], $user['password'])) :
 
 
 
 
+            $_SESSION['user'] = $user;
+            $_SESSION['messages']['success'][] = "Bienvenue " . $user['nickname'];
+
+
+            // alternative au dysfonctionnement du header
+            echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+            // header('location:../');
+            //   exit();
+
+        else :
+            $_SESSION['messages']['danger'][] = "Erreur sur le mot de passe";
+
+            // alternative au dysfonctionnement du header
+            echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+            // header('location:./login.php');
+            // exit();
+
+        endif;
+
+    elseif ($resultat->rowCount() == 0) :
+
+        $_SESSION['messages']['danger'][] = "Aucun compte n'est existant à cette adresse mail";
+
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+        // header('location:./login.php');
+        // exit();
+
+
+    elseif ($resultat->rowCount() > 1) :
+        $_SESSION['messages']['danger'][] = "Une erreur est survenue, merci de contacter l'administrateur du site";
+
+        // alternative au dysfonctionnement du header
+        echo '<script>window.location=' . '"' . BASE_URL . 'security/login.php"' . '</script>';
+        // header('location:./login.php');
+        // exit();
+
+    endif;
+
+endif;
 
 ?>
+
+
 <!-- .LOGIN-PAGE.MAIN-CONTENT -->
 <div class="login-page main-content">
 
@@ -107,7 +113,7 @@ if(!empty($_POST)):
                                     Se connecter
                                 </button>
                                 <hr class="mb-3">
-                                <h6 class="text-center mb-1">Vous n'avez pas de compte ? <a href="<?= "./register.php"; ?>">Inscrivez-vous !</a></h6>
+                                <h6 class="text-center mb-1">Vous n'avez pas de compte ? <a href="<?= "./register.php#register-card"; ?>">Inscrivez-vous !</a></h6>
                             
                             </div>
                         </div>

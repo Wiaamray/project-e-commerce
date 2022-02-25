@@ -171,7 +171,7 @@ endif;
                                     S'inscrire
                                 </button>
                                 <hr class="mb-3">
-                                <h6 class="text-center mb-1">Vous avez déjà un compte ? <a href="<?= "./login.php"; ?>">Connectez-vous !</a></h6>
+                                <h6 class="text-center mb-1">Vous avez déjà un compte ? <a href="<?= "./login.php#login-card"; ?>">Connectez-vous !</a></h6>
                             
                             </div>
                         </div>

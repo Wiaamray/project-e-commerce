@@ -28,7 +28,7 @@
     <ul>
         <h3>Contact</h3>
         <li>55-55-55-55</li>
-        <li>lepaniervert@gmail.com</li>
+        <li>paniervert@gmail.com</li>
         <li>6 rue de l'invention  75007  Paris </li>
     </ul>   
 </div> <!-- / .FOOTER-CONTACT -->
@@ -51,7 +51,7 @@
 </div> <!-- / . CONTENU-FOOTER -->
 
 <div class="footer-copyright">
-<p>&copy; 2022 Droits réservés Le Panier Vert</p>
+<p>&copy; 2022 Droits réservés Panier Vert</p>
 </div>
 
 </footer> <!-- / FOOTER -->
@@ -59,5 +59,9 @@
 </div> <!-- / .CONTAINER-FLUID begins in header.php -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="./js/app.js"></script>
+<!-- début script formulaire -->
+<script src="../js/formLogin.js"></script>
+<!-- début script formulaire -->
+<script src="../js/formRegister.js"></script>
 </html>
 

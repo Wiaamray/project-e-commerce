@@ -79,19 +79,27 @@ if (getQuantity() == 0) :
 
 
 ?>
-    <div class="">
+
+
+<!-- .MAIN-CONTENT -->
+<div class="content-full-cart main-content container-fluid">
+
+    <div class="container">
         <h3 class="alert alert-warning text-center align-items-center">Votre panier est vide, allez vite le remplir =>
             <a class="hover" href="<?= SITE; ?>">Nos Bijoux</a>
         </h3>
     </div>
 
-<?php else : ?>
-    <div class="d-flex justify-content-end">
+    <?php else : ?>
+
+    <div class="container d-flex justify-content-end">
         <a href="?destroy=1">
-            <button class="btn btn-outline-info btn-rounded mt-3">Vider le panier</button>
+            <button class="btn vider btn-outline-info btn-rounded mt-3">Vider le panier</button>
         </a>
     </div>
-    <table class="table mt-3">
+
+    <table class="row table mt-3">
+
         <thead class="thead-dark text-center">
             <tr>
                 <th>Nom</th>
@@ -107,6 +115,7 @@ if (getQuantity() == 0) :
                 <th>Annuler</th>
             </tr>
         </thead>
+
         <tbody class="text-center">
 
             <?php foreach ($details as $item) : ?>
@@ -150,6 +159,6 @@ if (getQuantity() == 0) :
             la commande</a>
     <?php endif; ?>
 
-
+</div><!-- / .MAIN-CONTENT -->
 <?php endif;
 require_once '../inc/footer.php'; ?>

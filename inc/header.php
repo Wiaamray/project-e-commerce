@@ -74,10 +74,11 @@
     <!-- .LOGO-CONTAINER -->
     <div class="logo-container">
         
+    <a class="navbar-brand" href="index.php">
         <div class="logo">
-            <h2><a class="navbar-brand" href="index.php">Panier Vert</a></h2>
+            <h2>Panier Vert</h2>
         </div>
-
+        </a>
         <!-- <p>des plats sains tout l'année</p> -->
     </div>
 
@@ -97,17 +98,16 @@
 
 
             <?php if (!admin() && !connect()) { ?>
-                    <li class=""><a href="<?= SITE . 'security/login.php#'; ?>" class="connection nav-link" >connection</a></li>
+                    <li class=""><a href="<?= SITE . 'security/login.php#login-card'; ?>" class="connection nav-link" >connection</a></li>
                 <?php } else { ?>
                     <!-- <li><a href="/projet/security/logout.php" class="">déconnection</a></li> -->
-                    <li><a href="<?= SITE; ?>?unset=1" class=""><i class="fa-solid fa-power-off fa-2x"></i></a>
+                    <li><a href="<?= SITE; ?>?unset=1" class="deconnection nav-link"><i class="fa-solid fa-power-off fa-2x"></i></a>
                 <?php } ?>
 
 
             <li class="">
                 <a href="<?= SITE . 'front/fullCart.php'; ?>" class="basket nav-link" >
                     <button type="button" class="btn position-relative p-2">
-                        <!-- <i class="fa-solid fa-cart-arrow-down fa-2xl "></i> -->
                         <i class="fas fa-shopping-basket fa-2xl"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>
                     </button>

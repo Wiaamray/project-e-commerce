@@ -1,5 +1,5 @@
 // Scroll to middle of the page
-window.addEventListener("cartes", function () {
+window.addEventListener("click", function () {
   window.scrollTo(window.scrollX, window.scrollY - 200);
 });
 
@@ -16,3 +16,4 @@ for (var i = 0; i < n; i++) {
     elms[i].style.cursor = "url(../upload/asperge-default.svg)";
   }
 }
+
