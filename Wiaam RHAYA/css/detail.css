@@ -1,30 +1,42 @@
-
-/*Reset*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+.card-content {
+    padding: 2rem;
 }
 
-body{
 
-    font-family: 'Poppins' sans-serif;
+/* icone fermeture de page */
+
+.close-button-container {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    padding: 1rem 1rem 0 0;
 }
+.close-button-container button {
+    background-color: #fff;
+}
+.close-button-container span.croix {
+    background: url(../upload/asperges-croix.svg) no-repeat top left;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    width: 40px;
+}
+/* Fin icone fermeture de page */
 
 
 
 /*Detail produit*/
-
-.container{
-
+.content-plat .container {
     margin-top: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.row{
+.content-plat .row {
+    margin-top :0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,29 +44,38 @@ body{
 
 /* Fin Detail produit*/
 
+.content-plat .card {
+    border-top: 1px solid #f7aa58;
+}
 
+.card-content {
+    margin-top: 0;
+    column-gap: 4rem;
 
+}
 
 /* Card left*/
 
-
-.card img{
-  margin-top:2rem;
-    width:100%;
-    
+.content-plat .card-left {
+    width: 40vw;
 }
-
-
+.content-plat .card img {
+    object-fit: cover;
+    width: 38vw;
+    height: 38vw;
+    border-radius: 0.5rem;
+}
 /* Fin Card left*/
 
 
-
 /* Card right*/
-
-.product-content{
+.content-plat .card-right {
+    width: 40vw;
+}
+.content-plat .product-content {
     margin-right:5rem;
 }
-.product-title{
+.content-plat .product-title {
     font-size: 3rem;
     text-transform: capitalize;
     font-weight: 700;
@@ -63,8 +84,7 @@ body{
     margin: 1rem 0;
 }
 
-
-.product-link{
+.content-plat .product-link {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -77,66 +97,84 @@ body{
     transition: all 0.5s ease;
 }
 
-.product-link:hover{
+.content-plat .product-link:hover {
     opacity: 0.9;
 }
 
-.product-rating{
+.content-plat .product-rating {
     color: #F7AA58;
 }
 
-.product-rating span{
+.content-plat.product-rating span {
     font-weight: 600;
     color: #252525;
 }
 
-.product-price{
+.content-plat.product-price {
     margin: 1rem 0;
+    font-family: 'Nunito', sans-serif;
     font-size: 1rem;
-    font-weight: 700;
-}
-.product-price span{
+    font-weight: 800;
+} 
+
+.content-plat .product-price span {
     font-weight: 400;
 }
-.last-price span{
+
+.content-plat .last-price span {
     color: #F39F06;
     text-decoration: line-through;
 }
-.new-price span{
-    color: #49B16A;
+
+.content-plat .new-price {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
 }
-.product-detail h2{
+.content-plat .new-price span {
+    color: #49B16A;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.content-plat .product-detail h2 {
     text-transform: capitalize;
     color: #12263a;
     padding-bottom: 0.6rem;
 }
-.product-detail p{
+
+.content-plat .product-detail p {
     font-size: 0.9rem;
     padding: 0.3rem;
     opacity: 0.8;
 }
-.product-detail ul{
+
+.content-plat .product-detail ul {
     margin: 1rem 0;
     font-size: 0.9rem;
 }
-.product-detail ul li{
+
+.content-plat .product-detail ul li {
     margin: 0;
     list-style: none;
-    background:url(); 
-    background-size: 18px;
     padding-left: 1.7rem;
     margin: 0.4rem 0;
+    font-family: 'Nunito', sans-serif;
     font-weight: 600;
     opacity: 0.9;
+    background: url();
+    background-size: 18px;
 }
-.product-detail ul li span{
+.content-plat .product-detail ul li span{
     font-weight: 400;
 }
-.purchase-info{
-    margin: 1.5rem 0;
+.content-plat .purchase-info{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
 }
-.purchase-info input,
-.purchase-info .btn{
+.content-plat .purchase-info input,
+.content-plat .purchase-info .btn {
     border: 1.5px solid #ddd;
     border-radius: 25px;
     text-align: center;
@@ -145,56 +183,48 @@ body{
     margin-right: 0.2rem;
     margin-bottom: 1rem;
 }
-.purchase-info input{
+.content-plat .purchase-info input {
     width: 60px;
 }
-.purchase-info .btn{
+.content-plat .content-plat .purchase-info .btn {
     cursor: pointer;
     color: #fff;
 }
-.purchase-info .btn:first-of-type{
+.content-plat .purchase-info .btn:first-of-type {
     background: #256eff;
 }
-.purchase-info .btn:last-of-type{
+.content-plat .purchase-info .btn:last-of-type {
     background:#F39F06;
 }
-.purchase-info .btn:hover{
-    opacity: 0.9;
-    color:black;
+
+.content-plat .btn.ajouter:hover {
+    transform: none;
 }
 
 /* Fin Card right*/
 
 
 
-
-
-
-/*Responsive*/
-
 @media screen and (min-width: 992px){
 
 
-    .card{
-        display: grid;
+    .content-plat .card{
+        /* display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1.5rem;
+        grid-gap: 1.5rem; */
     }
-    .card {
-        height: 100vh;
+    .content-plat .card {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .product-imgs{
+    .content-plat .product-imgs{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .product-content{
+    .content-plat .product-content{
         padding-top: 0;
     }
 }
-
-
 

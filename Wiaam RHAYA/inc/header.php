@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest" rel="stylesheet"> 
+
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -26,12 +28,18 @@
 
 ?>
 <!-- .SITE-HEADER -->
+ <!--menu Burger-->
+
+
+
+
 <div class="site-header">
 
     <!-- .LOGO-CONTAINER -->
+
     <div class="logo-container">
         <h2>
-            <a class="navbar-brand" href="">Au Bon Goût</a>
+            <a class="navbar-brand" href="index.php"></a>
         </h2>
         <p>des plats sains toute l'année</p>
     </div>
@@ -52,16 +60,38 @@
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info"></span>
                     </button>
                 </a>
-            </li>
-            
+            </li>         
         </ul>
 
+
+     <!--Menu Burger-->
+        
+<a class="burger" onclick="myFunction()">&#9776;</a>
+
+
+<script>
+            function myFunction() {
+                var x = document.getElementById("navbar");
+                if (x.className === "top-navigation") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "top-navigation";
+                }
+            }
+</script>
+
+
+     <!-- Fin Menu Burger-->  
+   
 </nav> 
+
+
 <!-- / .TOP-NAVIGATION -->
 
 
+
 <!-- .MAIN-NAVIGATION -->
-<nav class="main-navigation navbar navbar-expand-lg mb-5">
+<nav class="main-navigation navbar navbar-expand-lg mb-5" id="navbar">
     <div class="container-fluid">
             <ul class="navbar-nav d-flex justify-content-center me-auto">
 
@@ -87,8 +117,14 @@
             </ul>
 
     </div>
-</nav> <!-- / .MAIN-NAVIGATION -->
 
+
+   
+
+</nav> <!-- / .MAIN-NAVIGATION -->
+   
+
+ 
 
 <!-- .SEARCH-CONTAINER -->
 <div class="search-container">

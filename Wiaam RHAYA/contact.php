@@ -57,7 +57,7 @@ $mail = new PHPMailer(true);
 
     ob_start();
     include('mail.php');
-    $mail->Body = ob_get_clean();  
+    $mail->Body = ob_get_clean(); //Lit le contenu courant du tampon de sortie puis l'efface 
     // On envoie
       $mail->send();
       header('location:./');
