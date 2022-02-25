@@ -6,9 +6,9 @@ if (isset($_GET['unset'])) {
   unset($_SESSION['user']);
 
   // alternative au dysfonctionnement du header
-  // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-  header("location:./");
-  exit();
+  echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+  // header("location:./");
+  // exit();
 }
 
 // pour le add (avec le GET que l'on a inséré sur le bouton dans detailPlat.php)
@@ -16,9 +16,9 @@ if (isset($_GET['add'])) {
   add($_GET['add']);
 
   // alternative au dysfonctionnement du header
-  // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-  header("location:./");
-  exit();
+  echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+  // header("location:./");
+  // exit();
 }
 
 // pour le remove (avec le GET que l'on a inséré sur le bouton dans detailPlat.php)
@@ -26,9 +26,9 @@ if (isset($_GET['remove'])) {
   remove($_GET['remove']);
 
   // alternative au dysfonctionnement du header
-  // echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
-  header("location:./");
-  exit();
+  echo '<script>window.location=' . '"' . BASE_URL . '"' . '</script>';
+  // header("location:./");
+  // exit();
 }
 
 $resultat = executeRequete("SELECT * FROM product WHERE id=:id", array(
@@ -55,9 +55,9 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
 
       <!-- .CLOSE-BUTTON-CONTAINER -->
       <div class="close-button-container d-flex justify-content-end">
-      <!-- Bouton fermeture de la page -->
-      <!-- <i class="fa-solid fa-xmark fa-2x d-flex justify-content-end mr-2 mt-2" onclick=window.close()></i> -->
-        <button class="" onclick=window.close()>
+        <!-- Bouton fermeture de la page -->
+        <!-- <i class="fa-solid fa-xmark fa-2x d-flex justify-content-end mr-2 mt-2" onclick=window.close()></i> -->
+        <button class="" onclick='<?= 'window.location=' . '"' . BASE_URL . '"'; ?>'>
           <span class="croix"></span>
         </button>
       </div>
@@ -75,9 +75,7 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
 
         <!-- .CARD-LEFT-->
         <div class="card-left">
-          <!-- <img src="<?= $product['picture']; ?>" class="img-fluid rounded-start" alt="..."> -->
-        <!-- !!   ATTENTION L'IMAGE DOIT ETRE MODIFIÉE DANS LA BASE DE DONNÉES POUR AFFICHER L*IMAGE ENTIÈRE !! -->
-        <img src="<?= $product['picture']; ?>" class="img-fluid rounded-start" alt="..">
+          <img src="<?= $product['picture']; ?>" class="img-fluid rounded-start" alt="..">
         </div>
 
         <!-- .CARD-RIGHT-->
@@ -91,55 +89,53 @@ $product = $resultat->fetch(PDO::FETCH_ASSOC);
               <span></span>
             </div>
 
-          <div class="product-price">
-            <p class="last-price">Prix : <span><?= $product['price']; ?>€</span></p>
-            <p class="new-price">Prix Découverte -5% : <span><?= promo($product['price'], 0.05); ?>€</span></p>
-          </div>
+            <div class="product-price">
+              <p class="last-price">Prix : <span><?= $product['price']; ?>€</span></p>
+              <p class="new-price">Prix Découverte -5% : <span><?= promo($product['price'], 0.05); ?>€</span></p>
+            </div>
 
-          <div class="product-detail">
-            <h2><?= $product['name']; ?></h2>
-            <p><?= $product['description']; ?></p>
+            <div class="product-detail">
+              <h2><?= $product['name']; ?></h2>
+              <p><?= $product['description']; ?></p>
 
-            <ul>
-              <!-- <li>Filtre:</li> -->
-              <li>Categorie: <?= $product['category']; ?></li>
-            </ul>
+              <ul>
+                <!-- <li>Filtre:</li> -->
+                <li>Categorie: <?= $product['category']; ?></li>
+              </ul>
 
-          </div>
+            </div>
 
-          <?php if ($quant == 0) { ?>
+            <?php if ($quant == 0) { ?>
 
-          <div class="purchase-info">
-            <input type="number" min="0" value="<?= $quant; ?>">
-            <a href="<?= 'DetailPlat.php' ?>?add=<?= $product['id']; ?>">
-              <button type="button" class="btn ajouter">
-                Ajouter au panier <i class="fas fa-shopping-cart"></i>
-              </button>
-            </a>
-          </div>
+              <div class="purchase-info">
+                <input type="number" min="0" value="<?= $quant; ?>">
+                <a href="<?= 'DetailPlat.php' ?>?add=<?= $product['id']; ?>">
+                  <button type="button" class="btn ajouter">
+                    Ajouter au panier <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </a>
+              </div>
 
-          <?php } else { ?>
+            <?php } else { ?>
 
-          <div class="purchase-info d-flex align-items-center justify-content-between">
-            <a class="text-decoration-none" href="<?=  'DetailPlat.php'; ?>?remove=<?= $product['id']; ?>">
-              <button type="button" class="btn">Retirer</button>
-            </a>
-            <input type="number" min="0" value="<?= $quant; ?>">
-            <a class="text-decoration-none" href="<?=  'DetailPlat.php'; ?>?add=<?= $product['id']; ?>">
-              <button type="button" class="btn ajouter">Ajouter</button>
-            </a>
-          </div>
+              <div class="purchase-info d-flex align-items-center justify-content-between">
+                <div class="moins-plus">
+                  <a href="?remove=<?= $product['id']; ?>" class="moins">&ndash;</a>
+                  <input class="text-center text-primary pe-0" disabled type="number" value="<?= $quant; ?>">
+                  <a href="<?= SITE ?>?add=<?= $product['id']; ?>" class="plus">+</a>
+                </div>
+              </div>
 
-          <?php } ?>
+            <?php } ?>
 
-        </div> <!-- / .CARD-RIGHT -->
+          </div> <!-- / .CARD-RIGHT -->
 
-      </div><!-- / .CARD-CONTENT -->
+        </div><!-- / .CARD-CONTENT -->
 
-    </div> <!-- / .CARD -->
+      </div> <!-- / .CARD -->
 
-  </div> <!-- / .CARD-CONTAINER -->
+    </div> <!-- / .CARD-CONTAINER -->
 
-</div> <!-- / .CONTENT-PLAT .MAIN-CONTENT  -->
+  </div> <!-- / .CONTENT-PLAT .MAIN-CONTENT  -->
 
-<?php require_once 'inc/footer.php'; ?>
+  <?php require_once 'inc/footer.php'; ?>

@@ -19,6 +19,7 @@ html, * {
     top: 1rem;
     left: 0;
     right:0;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -104,14 +105,7 @@ html, * {
     padding: 0;
 }
 
-.top-navigation li:hover, 
-.top-navigation a:hover, 
-.top-navigation a button:hover,
-.top-navigation a button i:hover
-.top-navigation a button i span:hover {
-    cursor: url(../upload/asperge-default.svg), auto;
-    transition: all 500ms ease;
-}
+
 
 .top-navigation a {
     padding: .75rem;
@@ -141,6 +135,15 @@ a.deconnection {
     left: 1.5rem;
 }
 
+.top-navigation li:hover, 
+.top-navigation a:hover, 
+.top-navigation a button:hover,
+.top-navigation a button i:hover
+.top-navigation a button i span:hover {
+    cursor: url(../upload/asperge-default.svg), auto;
+    transition: all 500ms ease;
+}
+
 .fa-power-off {
     color: #e05929;
 
@@ -163,6 +166,7 @@ a.deconnection {
     font-weight: 900;    
     transform: rotate(-20deg);
     transition: all 500ms ease;
+    cursor: url(../upload/asperge-default.svg), auto;
 } 
 
 .top-navigation a button:hover {
